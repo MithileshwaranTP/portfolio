@@ -31,22 +31,26 @@
   display: flex;
   flex-wrap: wrap;
   gap: 10px; /* space between each skill */
+  margin-top: 0.5rem;
 }
 
 .skill {
-  background-color: #38bdf8; /* blue box */
-  color: white;
-  padding: 0.4rem 0.8rem;
-  border-radius: 0.5rem;
-  font-size: 0.8rem;
+  background-color: #f1f5f9; /* light gray background */
+  color: #1e293b; /* dark text */
+  padding: 0.3rem 0.8rem; /* compact padding */
+  border-radius: 0.35rem; /* slightly rounded corners */
+  font-size: 0.85rem; /* smaller, subtle font */
   font-weight: 500;
+  border: 1px solid #e2e8f0; /* optional subtle border */
   transition: transform 0.2s, box-shadow 0.2s;
+  cursor: default;
 }
 
 .skill:hover {
   transform: translateY(-2px);
-  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
 }
+
 
 
 

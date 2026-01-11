@@ -18,10 +18,7 @@
       overflow-x: hidden;
     }
 
-    a {
-      text-decoration: none;
-      color: inherit;
-    }
+    a { text-decoration: none; color: inherit; }
 
     header {
       background: #ffffff;
@@ -45,8 +42,6 @@
       max-width: 100%;
       border-radius: 50%;
       object-fit: cover;
-      background: white;
-      display: block;
     }
 
     header h1 {
@@ -77,13 +72,10 @@
       color: #f1f5f9;
       margin: 0.5rem 1rem;
       font-weight: 600;
-      font-size: 1rem;
       padding: 0.4rem 0.8rem;
     }
 
-    nav a:hover {
-      color: #38bdf8;
-    }
+    nav a:hover { color: #38bdf8; }
 
     section {
       max-width: 1000px;
@@ -113,14 +105,7 @@
       padding-left: 1rem;
     }
 
-    .timeline-item {
-      margin-bottom: 1.5rem;
-    }
-
-    .timeline-item h3 {
-      font-size: 1.2rem;
-      margin-bottom: 0.25rem;
-    }
+    .timeline-item { margin-bottom: 1.5rem; }
 
     .company-date {
       display: flex;
@@ -142,9 +127,7 @@
       color: #555;
     }
 
-    .skill-category {
-      margin-bottom: 1.5rem;
-    }
+    .skill-category { margin-bottom: 1.5rem; }
 
     .skill-category h3 {
       margin-bottom: 0.5rem;
@@ -189,35 +172,13 @@
       cursor: pointer;
     }
 
-    /* ===== MOBILE ===== */
     @media (max-width: 768px) {
-      header img {
-        width: 140px;
-        height: 140px;
-      }
-
-      header h1 {
-        font-size: 1.8rem;
-      }
-
-      header p {
-        font-size: 1rem;
-      }
-
-      nav {
-        flex-direction: column;
-        align-items: center;
-      }
-
-      .company-date {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 4px;
-      }
-
-      section h2 {
-        font-size: 1.5rem;
-      }
+      header img { width: 140px; height: 140px; }
+      header h1 { font-size: 1.8rem; }
+      header p { font-size: 1rem; }
+      nav { flex-direction: column; }
+      .company-date { flex-direction: column; align-items: flex-start; gap: 4px; }
+      section h2 { font-size: 1.5rem; }
     }
   </style>
 </head>
@@ -240,6 +201,7 @@
   <a href="#contact">Contact</a>
 </nav>
 
+<!-- ABOUT -->
 <section id="about">
   <h2>About Me</h2>
   <div class="card timeline">
@@ -256,6 +218,7 @@
   </div>
 </section>
 
+<!-- EXPERIENCE -->
 <section id="experience">
   <h2>Work Experience</h2>
   <div class="card timeline">
@@ -295,10 +258,10 @@
   </div>
 </section>
 
+<!-- EDUCATION -->
 <section id="education">
   <h2>Education</h2>
   <div class="card timeline">
-
     <div class="timeline-item">
       <h3>M.Sc. in Electrical Engineering & IT (Automation)</h3>
       <div class="company-date">
@@ -314,10 +277,10 @@
         <span>Aug 2014 – May 2018 | Manipal, India</span>
       </div>
     </div>
-
   </div>
 </section>
 
+<!-- SKILLS (FULLY RESTORED) -->
 <section id="skills">
   <h2>Skills</h2>
   <div class="card timeline">
@@ -365,7 +328,7 @@
       </div>
     </div>
 
-    div class="skill-category">
+    <div class="skill-category">
       <h3>Other Tools:</h3>
       <div class="skills-boxes">
         <div class="skill">Node-RED</div>
@@ -377,7 +340,7 @@
       </div>
     </div>
 
-  <div class="skill-category">
+    <div class="skill-category">
       <h3>Programming:</h3>
       <div class="skills-boxes">
         <div class="skill">C</div>
@@ -386,7 +349,8 @@
         <div class="skill">VB Script</div>
       </div>
     </div>
- <div class="skill-category">
+
+    <div class="skill-category">
       <h3>Engineering Software:</h3>
       <div class="skills-boxes">
         <div class="skill">Smart Plant Instrumentation (SPI)</div>
@@ -395,7 +359,7 @@
       </div>
     </div>
 
-  <div class="skill-category">
+    <div class="skill-category">
       <h3>Languages:</h3>
       <div class="skills-boxes">
         <div class="skill">Deutsch (B2.1)</div>
@@ -406,18 +370,13 @@
   </div>
 </section>
 
+<!-- CONTACT -->
 <section id="contact">
   <h2>Contact</h2>
   <div class="card timeline">
     <ul>
-      <li>Email:
-        <a href="mailto:tpmithileshwaran@gmail.com">tpmithileshwaran@gmail.com</a>
-      </li>
-      <li>LinkedIn:
-        <a href="https://www.linkedin.com/in/tpmithileshwaran/" target="_blank">
-          linkedin.com/in/tpmithileshwaran
-        </a>
-      </li>
+      <li>Email: <a href="mailto:tpmithileshwaran@gmail.com">tpmithileshwaran@gmail.com</a></li>
+      <li>LinkedIn: <a href="https://www.linkedin.com/in/tpmithileshwaran/" target="_blank">linkedin.com/in/tpmithileshwaran</a></li>
     </ul>
   </div>
 </section>
@@ -430,20 +389,15 @@
 
 <script>
   document.addEventListener("DOMContentLoaded", () => {
-    const roles = [
-      "Automation Engineer",
-      "Instrumentation Engineer",
-      "Industry 4.0 Enthusiast"
-    ];
-
-    let roleIndex = 0;
+    const roles = ["Automation Engineer","Instrumentation Engineer","Industry 4.0 Enthusiast"];
+    let i = 0;
     const roleText = document.getElementById("role-text");
 
     setInterval(() => {
       roleText.classList.add("fade-out");
       setTimeout(() => {
-        roleIndex = (roleIndex + 1) % roles.length;
-        roleText.textContent = roles[roleIndex];
+        i = (i + 1) % roles.length;
+        roleText.textContent = roles[i];
         roleText.classList.remove("fade-out");
       }, 800);
     }, 3000);
@@ -453,9 +407,7 @@
       btn.style.display = window.scrollY > 200 ? "block" : "none";
     });
 
-    btn.addEventListener("click", () => {
-      window.scrollTo({ top: 0, behavior: "smooth" });
-    });
+    btn.onclick = () => window.scrollTo({ top: 0, behavior: "smooth" });
   });
 </script>
 

@@ -136,4 +136,233 @@
     }
     .skill:hover {
       transform: translateY(-2px);
-      box-shadow: 0 4px 8px rgba(0,0,0,0.0
+      box-shadow: 0 4px 8px rgba(0,0,0,0.08);
+    }
+
+    /* Footer */
+    footer {
+      background: #1e293b;
+      color: #cbd5e1;
+      text-align: center;
+      padding: 1.5rem;
+      margin-top: 2rem;
+    }
+    footer a { color: #38bdf8; font-weight: 600; }
+
+    /* Back-to-top button */
+    #back-to-top {
+      display: none;
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      z-index: 1000;
+      font-size: 24px;
+      background-color: #38bdf8;
+      color: white;
+      border: none;
+      border-radius: 50%;
+      padding: 12px 16px;
+      cursor: pointer;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+      transition: background-color 0.3s, transform 0.3s;
+    }
+    #back-to-top:hover { background-color: #0ea5e9; transform: translateY(-2px); }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="photo-wrapper">
+      <img src="Mithileshwaran_TP.png" alt="Mithileshwaran T P">
+    </div>
+    <h1>Mithileshwaran T P</h1>
+    <p id="role-text">Automation Engineer</p>
+  </header>
+
+  <nav>
+    <a href="#about">About Me</a>
+    <a href="#experience">Work Experience</a>
+    <a href="#education">Education</a>
+    <a href="#skills">Skills</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <!-- About Section -->
+  <section id="about">
+    <h2>About Me</h2>
+    <div class="card timeline">
+      <p>
+        This is Mithilesh, an Automation Engineer with 6 years of experience, currently working as a DCS Engineer (Siemens PCS 7) in the chemical industry. 
+        With a Master’s in Automation (Germany) and a Bachelor's in Instrumentation & Control, I’ve grown from field instrumentation to PLC, HMI, and DCS systems along the ISA-95 automation pyramid.
+        <br><br>
+        I am enthusiastic about working in collaborative team environments, continuously honing my managerial and leadership skills, and driving collective success. 
+        I look to collaborate with like-minded professionals to learn and contribute in my field.
+      </p>
+    </div>
+  </section>
+
+  <!-- Experience Section -->
+  <section id="experience">
+    <h2>Work Experience</h2>
+    <div class="card timeline">
+      <div class="timeline-item">
+        <h3>Automation Engineer (Siemens PCS7)</h3>
+        <div class="company-date">
+          <h4>ECO3 GmbH</h4>
+          <span>Sept 2024 – Present | Wiesbaden, Germany</span>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <h3>Working Student in OT & IIoT / Master Thesis in AR & VR</h3>
+        <div class="company-date">
+          <h4>Döhler GmbH</h4>
+          <span>Apr 2023 – Mar 2024 | Darmstadt, Germany</span>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <h3>Intern in Automation Software</h3>
+        <div class="company-date">
+          <h4>IOCTO GmbH</h4>
+          <span>Sept 2022 – Mar 2023 | Kriftel, Germany</span>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <h3>Instrumentation Design Engineer</h3>
+        <div class="company-date">
+          <h4>Worley Energy & Chemicals</h4>
+          <span>Sept 2018 – June 2021 | Navi Mumbai, India</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Education Section -->
+  <section id="education">
+    <h2>Education</h2>
+    <div class="card timeline">
+      <div class="timeline-item">
+        <h3>M.Sc. in Electrical Engineering & IT (Automation)</h3>
+        <div class="company-date">
+          <h4>University of Applied Sciences Darmstadt</h4>
+          <span>Sept 2021 – Aug 2024 | Darmstadt, Germany</span>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <h3>Bachelor of Technology in Instrumentation & Control Engineering</h3>
+        <div class="company-date">
+          <h4>Manipal Institute of Technology</h4>
+          <span>Aug 2014 – May 2018 | Manipal, India</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills">
+    <h2>Skills</h2>
+    <div class="card">
+      <div class="skill-category">
+        <h3>Industrial Automation:</h3>
+        <div class="skills-boxes">
+          <div class="skill">Simatic PCS7</div>
+          <div class="skill">STEP 7</div>
+          <div class="skill">WinCC</div>
+          <div class="skill">TIA Portal</div>
+          <div class="skill">STEP 5</div>
+        </div>
+      </div>
+      <div class="skill-category">
+        <h3>PLC Programming:</h3>
+        <div class="skills-boxes">
+          <div class="skill">CFC</div>
+          <div class="skill">SCL</div>
+          <div class="skill">SFC</div>
+          <div class="skill">FBD</div>
+          <div class="skill">LAD</div>
+        </div>
+      </div>
+      <div class="skill-category">
+        <h3>Engineering Standards:</h3>
+        <div class="skills-boxes">
+          <div class="skill">IEC 61131-3</div>
+          <div class="skill">Ex-Proof (TÜV)</div>
+          <div class="skill">ISO 13849-1</div>
+          <div class="skill">ISA 88, 95, 100.11a</div>
+        </div>
+      </div>
+      <div class="skill-category">
+        <h3>Other Tools:</h3>
+        <div class="skills-boxes">
+          <div class="skill">Node-RED</div>
+          <div class="skill">Grafana</div>
+          <div class="skill">Influx DB</div>
+          <div class="skill">VMWare ESXi</div>
+          <div class="skill">MS Excel</div>
+          <div class="skill">MS Visio</div>
+        </div>
+      </div>
+      <div class="skill-category">
+        <h3>Languages:</h3>
+        <div class="skills-boxes">
+          <div class="skill">Deutsch (B2.1)</div>
+          <div class="skill">English (C1)</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact">
+    <h2>Contact</h2>
+    <div class="card">
+      <p>If you'd like to get in touch, feel free to reach out via:</p>
+      <ul>
+        <li>Email: <a href="mailto:tpmithileshwaran@gmail.com">tpmithileshwaran@gmail.com</a></li>
+        <li>LinkedIn: <a href="https://www.linkedin.com/in/tpmithileshwaran/" target="_blank">linkedin.com/in/tpmithileshwaran</a></li>
+      </ul>
+    </div>
+  </section>
+
+  <footer>
+    <p>© Mithileshwaran T P</p>
+  </footer>
+
+  <!-- Back-to-top Button -->
+  <button id="back-to-top" title="Go to top">↑</button>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      // Role rotation
+      const roles = ["Automation Engineer", "Instrumentation Engineer", "Industry 4.0 Enthusiast"];
+      let roleIndex = 0;
+      const roleElement = document.getElementById("role-text");
+
+      setInterval(() => {
+        roleElement.classList.add("fade-out");
+        setTimeout(() => {
+          roleIndex = (roleIndex + 1) % roles.length;
+          roleElement.textContent = roles[roleIndex];
+          roleElement.classList.remove("fade-out");
+        }, 800);
+      }, 3000);
+
+      // Back-to-top button
+      const backToTopButton = document.getElementById("back-to-top");
+      window.addEventListener("scroll", () => {
+        backToTopButton.style.display = window.scrollY > 200 ? "block" : "none";
+      });
+      backToTopButton.addEventListener("click", () => {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      });
+
+      // Smooth scroll for nav links
+      document.querySelectorAll("nav a").forEach(link => {
+        link.addEventListener("click", e => {
+          e.preventDefault();
+          const target = document.getElementById(link.getAttribute("href").slice(1));
+          window.scrollTo({ top: target.offsetTop - 50, behavior: "smooth" });
+        });
+      });
+    });
+  </script>
+</body>
+</html>

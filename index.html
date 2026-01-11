@@ -17,28 +17,38 @@
 }
     /* styles.css */
 
-    .skills-boxes {
+  .skill-category {
+  margin-bottom: 2rem; /* space between categories */
+}
+
+.skill-category h3 {
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  color: #1e293b;
+}
+
+.skills-boxes {
   display: flex;
   flex-wrap: wrap;
-  gap: 10px; /* space between boxes */
-  margin-top: 1rem;
+  gap: 10px; /* space between each skill */
 }
 
 .skill {
-  background-color: #38bdf8; /* blue color, you can change */
+  background-color: #38bdf8; /* blue box */
   color: white;
-  padding: 0.5rem 1rem;
+  padding: 0.4rem 0.8rem;
   border-radius: 0.5rem;
   font-size: 0.95rem;
   font-weight: 500;
   transition: transform 0.2s, box-shadow 0.2s;
-  cursor: default;
 }
 
 .skill:hover {
   transform: translateY(-2px);
   box-shadow: 0 4px 10px rgba(0,0,0,0.15);
 }
+
+
 
 .company-date {
   display: flex;
@@ -338,66 +348,93 @@ footer a {
   </div>
 </section>
 
-
         <section id="skills" class="skills-section">
   <h2>Skills</h2>
-  <div class="skills-boxes">
-    <div class="skill">Simatic PCS7</div>
-    <div class="skill">STEP 7</div>
-    <div class="skill">WinCC</div>
-    <div class="skill">TIA Portal</div>
-    <div class="skill">PLC Programming</div>
-    <div class="skill">Node-RED</div>
-    <div class="skill">Grafana</div>
-    <div class="skill">Python</div>
-    <div class="skill">C/C++</div>
-    <div class="skill">MATLAB</div>
-    <div class="skill">LabVIEW</div>
-    <div class="skill">English (C1)</div>
-    <div class="skill">Deutsch (B2.1)</div>
+  <div class="skill-category">
+    <h3>Industrial Automation:</h3>
+    <div class="skills-boxes">
+      <div class="skill">Simatic PCS7</div>
+      <div class="skill">STEP 7</div>
+      <div class="skill">WinCC</div>
+      <div class="skill">TIA Portal</div>
+      <div class="skill">STEP 5</div>
+    </div>
+  </div>
+
+  <div class="skill-category">
+    <h3>PLC Programming:</h3>
+    <div class="skills-boxes">
+      <div class="skill">CFC</div>
+      <div class="skill">SCL</div>
+      <div class="skill">SFC</div>
+      <div class="skill">FBD</div>
+      <div class="skill">LAD</div>
+    </div>
+  </div>
+
+  <div class="skill-category">
+    <h3>Engineering Standards:</h3>
+    <div class="skills-boxes">
+      <div class="skill">IEC 61131-3</div>
+      <div class="skill">Ex-Proof (TÜV)</div>
+      <div class="skill">ISO 13849-1</div>
+      <div class="skill">ISA 88, 95, 100.11a</div>
+    </div>
+  </div>
+
+  <div class="skill-category">
+    <h3>Network Protocols:</h3>
+    <div class="skills-boxes">
+      <div class="skill">Profinet</div>
+      <div class="skill">Profibus</div>
+      <div class="skill">OPC-UA</div>
+      <div class="skill">MQTT</div>
+      <div class="skill">Modbus</div>
+    </div>
+  </div>
+
+  <div class="skill-category">
+    <h3>Other Tools:</h3>
+    <div class="skills-boxes">
+      <div class="skill">Node-RED</div>
+      <div class="skill">Grafana</div>
+      <div class="skill">Influx DB</div>
+      <div class="skill">VMWare ESXi</div>
+      <div class="skill">MS Excel</div>
+      <div class="skill">MS Visio</div>
+    </div>
+  </div>
+
+  <div class="skill-category">
+    <h3>Programming:</h3>
+    <div class="skills-boxes">
+      <div class="skill">C</div>
+      <div class="skill">C++</div>
+      <div class="skill">JavaScript</div>
+      <div class="skill">VB Script</div>
+    </div>
+  </div>
+
+  <div class="skill-category">
+    <h3>Engineering Software:</h3>
+    <div class="skills-boxes">
+      <div class="skill">Smart Plant Instrumentation (SPI)</div>
+      <div class="skill">MATLAB & Simulink</div>
+      <div class="skill">LabVIEW</div>
+    </div>
+  </div>
+
+  <div class="skill-category">
+    <h3>Languages:</h3>
+    <div class="skills-boxes">
+      <div class="skill">Deutsch (B2.1)</div>
+      <div class="skill">English (C1)</div>
+    </div>
   </div>
 </section>
 
 
-  <section id="skills" class="skills-section">
-  <h2>Skills</h2>
-  <div class="card timeline">
-    <ul class="skills-list">
-      <li>
-        <strong>Industrial Automation:</strong><br>
-        Simatic PCS7 | STEP 7 | WinCC | TIA Portal | STEP 5
-      </li>
-      <li>
-        <strong>PLC Programming:</strong><br>
-        CFC | SCL | SFC | FBD | LAD
-      </li>
-      <li>
-        <strong>Engineering Standards:</strong><br>
-        IEC 61131-3 | Ex-Proof (TÜV) | ISO 13849-1 | ISA 88, 95, 100.11a
-      </li>
-      <li>
-        <strong>Network Protocols:</strong><br>
-        Profinet | Profibus | OPC-UA | MQTT | Modbus
-      </li>
-      <li>
-        <strong>Other Tools:</strong><br>
-        Node-RED | Grafana | Influx DB | VMWare ESXi | MS Excel | MS Visio  
-      </li>
-      <li>
-        <strong>Programming:</strong><br>
-        C | C++ | JavaScript | VB Script 
-      </li>
-      <li>
-        <strong>Engineering Software:</strong><br>
-        Smart Plant Instrumentation (SPI) | MATLAB & Simulink | LabVIEW 
-      </li>
-      <li>
-        <strong>Languages:</strong><br>
-        Deutsch (B2.1) | English (C1)
-      </li>
-    </ul>
-  </div>
-</section>
+        
   
   <section id="contact">
     <h2>Contact</h2>

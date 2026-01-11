@@ -15,7 +15,23 @@
   line-height: 1.7;
   letter-spacing: 0.2px;
 }
-    
+    /* styles.css */
+.company-date {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.company-date h4 {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  font-weight: 600;
+}
+.company-date span {
+  font-family: 'Courier New', monospace;
+  font-size: 0.9em;
+  color: #555;
+}
+
 #role-text {
   transition: opacity 0.8s ease-in-out;
 }
@@ -226,24 +242,28 @@ footer a {
     <div class="card timeline">
       <div class="timeline-item">
         <h3>Automation Engineer (Siemens PCS7)</h3>
+        <div class="company-date">
         <h4>ECO3 GmbH</h4>
         <span>Sept 2024 – Present | Wiesbaden, Germany</span>
         <p></p>
       </div>
       <div class="timeline-item">
         <h3>Working Student in OT & IIoT / Master Thesis in AR & VR</h3>
+        <div class="company-date">
         <h4>Döhler GmbH</h4>
         <span>Apr 2023 – Mar 2024 | Darmstadt, Germany</span>
         <p></p>
       </div>
       <div class="timeline-item">
         <h3>Intern in Automation Software</h3>
+        <div class="company-date">
         <h4>IOCTO GmbH</h4>
         <span>Sept 2022 – Mar 2023 | Kriftel, Germany</span>
         <p></p>
       </div>
       <div class="timeline-item">
         <h3>Instrumentation Design Engineer</h3>
+        <div class="company-date">
         <h4>Worley Energy & Chemicals</h4>
         <span>Sept 2018 – June 2021 | Navi Mumbai, India</span>
         <p></p>
@@ -256,11 +276,13 @@ footer a {
     <div class="card timeline">
       <div class="timeline-item">
         <h3>M.Sc. in Electrical Engineering & IT (Automation)</h3> 
+        <div class="company-date">
         <h4>University of Applied Sciences Darmstadt</h4>
         <span>Sept 2021 – Aug 2024 | Darmstadt, Germany</span>
       </div>
       <div class="timeline-item">
         <h3>Bachelor of Technology in Instrumentation & Control Engineering</h3>
+        <div class="company-date">
         <h4>Manipal Institue of Technology</h4>
         <span>Aug 2014 – May 2018 | Manipal, India</span>
       </div>
@@ -367,6 +389,7 @@ footer a {
   const roles = [
     "Automation Engineer",
     "Instrumentation Engineer"
+    "Industry 4.0 Enthusiast"
   ];
 
   let roleIndex = 0;

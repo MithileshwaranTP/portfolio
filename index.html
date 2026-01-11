@@ -180,6 +180,18 @@
       .company-date { flex-direction: column; align-items: flex-start; gap: 4px; }
       section h2 { font-size: 1.5rem; }
     }
+    /* Contact section link behavior */
+#contact a {
+  text-decoration: underline;
+  text-decoration-color: transparent;
+  transition: text-decoration-color 0.2s ease;
+}
+
+#contact a:hover,
+#contact a:focus {
+  text-decoration-color: currentColor;
+}
+
   </style>
 </head>
 

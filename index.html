@@ -15,6 +15,14 @@
   line-height: 1.7;
   letter-spacing: 0.2px;
 }
+    
+#role-text {
+  transition: opacity 0.8s ease-in-out;
+}
+
+.fade-out {
+  opacity: 0;
+}
 
 /* HEADER */
 header {
@@ -162,7 +170,7 @@ footer a {
   <header>
     <img src="Mithileshwaran_TP.png" alt="Mithileshwaran T P">
     <h1>Mithileshwaran T P</h1>
-    <p>Automation Engineer | Instrumentation Engineer </p>
+    <p id="role-text">Automation Engineer</p>
   </header>
 
   <nav>
@@ -312,7 +320,7 @@ footer a {
   </section>
 
   <footer>
-    <p>© Mithileshwaran T P.</p>
+    <p>© Mithileshwaran T P</p>
   </footer>
 <script>
   // Smooth scroll and center section in viewport
@@ -329,5 +337,26 @@ footer a {
     });
   });
 </script>
+<script>
+  const roles = [
+    "Automation Engineer",
+    "Instrumentation Engineer"
+  ];
+
+  let roleIndex = 0;
+  const roleElement = document.getElementById("role-text");
+
+  setInterval(() => {
+    roleElement.classList.add("fade-out");
+
+    setTimeout(() => {
+      roleIndex = (roleIndex + 1) % roles.length;
+      roleElement.textContent = roles[roleIndex];
+      roleElement.classList.remove("fade-out");
+    }, 800);
+
+  }, 3000);
+</script>
+
 </body>
 </html>

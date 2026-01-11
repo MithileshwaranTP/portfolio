@@ -94,20 +94,32 @@
       border-left: 6px solid #38bdf8;
       padding-left: 0.75rem;
     }
-  /* Highlighted contact links */
+  /* Highlighted underline for contact links */
   .contact-link {
-  display: inline-block;
-  background-color: #38bdf8;
-  color: white !important;
-  padding: 4px 8px;
-  border-radius: 5px;
+  position: relative;
+  color: #0f172a; /* dark text */
+  text-decoration: none;
   font-weight: 600;
-  transition: background-color 0.3s;
+  }
+
+  .contact-link::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 3px; /* thickness of the underline */
+  background-color: #38bdf8; /* underline color */
+  border-radius: 2px;
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+  transform-origin: left;
+  }
+
+.contact-link:hover::after {
+  transform: scaleX(1);
 }
 
-.contact-link:hover {
-  background-color: #0ea5e9;
-}
     .card {
       background: white;
       border-radius: 0.75rem;

@@ -16,6 +16,30 @@
   letter-spacing: 0.2px;
 }
     /* styles.css */
+
+    .skills-boxes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px; /* space between boxes */
+  margin-top: 1rem;
+}
+
+.skill {
+  background-color: #38bdf8; /* blue color, you can change */
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition: transform 0.2s, box-shadow 0.2s;
+  cursor: default;
+}
+
+.skill:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
 .company-date {
   display: flex;
   align-items: center;
@@ -311,6 +335,26 @@ footer a {
       <h3>Instrumentation Engineering</h3>
     </div>
 
+  </div>
+</section>
+
+
+        <section id="skills" class="skills-section">
+  <h2>Skills</h2>
+  <div class="skills-boxes">
+    <div class="skill">Simatic PCS7</div>
+    <div class="skill">STEP 7</div>
+    <div class="skill">WinCC</div>
+    <div class="skill">TIA Portal</div>
+    <div class="skill">PLC Programming</div>
+    <div class="skill">Node-RED</div>
+    <div class="skill">Grafana</div>
+    <div class="skill">Python</div>
+    <div class="skill">C/C++</div>
+    <div class="skill">MATLAB</div>
+    <div class="skill">LabVIEW</div>
+    <div class="skill">English (C1)</div>
+    <div class="skill">Deutsch (B2.1)</div>
   </div>
 </section>
 

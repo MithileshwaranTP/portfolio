@@ -86,6 +86,22 @@
     }
 
     /* Sections */
+    .section-title {
+    position: relative;
+    display: inline-block;
+    padding-left: 12px; /* space for the blue strip */
+    }
+
+    .section-title::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 6px;
+    height: 100%;
+    background-color: #38bdf8;
+    }
+
     section {
       max-width: 1000px;
       margin: 3rem auto;
@@ -407,8 +423,8 @@
     </div>
   </section>
 
-  <section id="contact">
-  <h2>Contact</h2>
+ <section id="contact">
+  <h2 class="section-title">Contact</h2>
   <div class="card">
     <p>If you'd like to get in touch, feel free to reach out via:</p>
     <ul>
@@ -417,6 +433,7 @@
     </ul>
   </div>
 </section>
+
 
   <footer>
     <p>© Mithileshwaran T P</p>

@@ -17,8 +17,9 @@
 }
     /* styles.css */
 
-  .skill-category {
-  margin-bottom: 2rem; /* space between categories */
+/* skill category spacing */
+.skill-category {
+  margin-bottom: 1.5rem; /* space between categories */
 }
 
 .skill-category h3 {
@@ -27,29 +28,30 @@
   color: #1e293b;
 }
 
+/* skills container */
 .skills-boxes {
   display: flex;
   flex-wrap: wrap;
-  gap: 10px; /* space between each skill */
-  margin-top: 0.5rem;
+  gap: 10px; /* space between boxes */
 }
 
+/* individual skill boxes */
 .skill {
   background-color: #f1f5f9; /* light gray background */
   color: #1e293b; /* dark text */
-  padding: 0.3rem 0.8rem; /* compact padding */
-  border-radius: 0.35rem; /* slightly rounded corners */
-  font-size: 0.85rem; /* smaller, subtle font */
+  padding: 0.3rem 0.8rem;
+  border-radius: 0.35rem;
+  font-size: 0.85rem;
   font-weight: 500;
-  border: 1px solid #e2e8f0; /* optional subtle border */
+  border: 1px solid #e2e8f0; /* subtle border */
   transition: transform 0.2s, box-shadow 0.2s;
-  cursor: default;
 }
 
 .skill:hover {
   transform: translateY(-2px);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.08);
 }
+
 
 
 
@@ -334,6 +336,7 @@ footer a {
 
         <section id="skills" class="skills-section">
   <h2>Skills</h2>
+          <div class="card timeline"> <!-- big white box like other sections -->
   <div class="skill-category">
     <h3>Industrial Automation:</h3>
     <div class="skills-boxes">

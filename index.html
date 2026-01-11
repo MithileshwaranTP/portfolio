@@ -15,13 +15,10 @@
       color: #111827;
       font-size: 16px;
       line-height: 1.7;
-      overflow-x: hidden; /* Prevent horizontal scroll on mobile */
+      overflow-x: hidden;
     }
 
-    a {
-      text-decoration: none;
-      color: inherit;
-    }
+    a { text-decoration: none; color: inherit; }
 
     header {
       background: #ffffff;
@@ -46,7 +43,6 @@
       border-radius: 50%;
       object-fit: cover;
       background: white;
-      display: block;
     }
 
     header h1 {
@@ -63,9 +59,7 @@
       transition: opacity 0.6s ease-in-out;
     }
 
-    .fade-out {
-      opacity: 0;
-    }
+    .fade-out { opacity: 0; }
 
     nav {
       background: #0f172a;
@@ -79,14 +73,10 @@
       color: #f1f5f9;
       margin: 0.5rem 1rem;
       font-weight: 600;
-      font-size: 1rem;
-      padding: 0.4rem 0.8rem; /* better touch target */
-      transition: color 0.2s;
+      padding: 0.4rem 0.8rem;
     }
 
-    nav a:hover {
-      color: #38bdf8;
-    }
+    nav a:hover { color: #38bdf8; }
 
     section {
       max-width: 1000px;
@@ -106,15 +96,9 @@
     .card {
       background: white;
       border-radius: 0.75rem;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
       padding: 1.5rem;
       margin-bottom: 1.5rem;
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
-    }
-
-    .card:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
     }
 
     .timeline {
@@ -122,21 +106,13 @@
       padding-left: 1rem;
     }
 
-    .timeline-item {
-      margin-bottom: 1.5rem;
-    }
-
-    .timeline-item h3 {
-      font-size: 1.2rem;
-      margin-bottom: 0.25rem;
-    }
+    .timeline-item { margin-bottom: 1.5rem; }
 
     .company-date {
       display: flex;
-      align-items: center;
       gap: 10px;
       font-style: italic;
-      margin-bottom: 1rem;
+      margin-bottom: 0.5rem;
     }
 
     .company-date h4 {
@@ -148,18 +124,6 @@
     .company-date span {
       font-family: monospace;
       font-size: 0.9em;
-      color: #555;
-    }
-
-    .skill-category {
-      margin-bottom: 1.5rem;
-    }
-
-    .skill-category h3 {
-      margin-bottom: 0.5rem;
-      font-weight: 600;
-      font-size: 1.2rem;
-      color: #1e293b;
     }
 
     .skills-boxes {
@@ -169,19 +133,11 @@
     }
 
     .skill {
-      background-color: #f1f5f9;
-      color: #1e293b;
+      background: #f1f5f9;
       padding: 0.3rem 0.8rem;
       border-radius: 0.35rem;
       font-size: 0.85rem;
-      font-weight: 500;
       border: 1px solid #e2e8f0;
-      transition: transform 0.2s, box-shadow 0.2s;
-    }
-
-    .skill:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
     }
 
     footer {
@@ -189,94 +145,27 @@
       color: #cbd5e1;
       text-align: center;
       padding: 1.5rem;
-      margin-top: 2rem;
     }
 
     #back-to-top {
       display: none;
       position: fixed;
-      bottom: 30px;
-      right: 30px;
-      z-index: 1000;
-      font-size: 24px;
-      background-color: #38bdf8;
+      bottom: 20px;
+      right: 20px;
+      background: #38bdf8;
       color: white;
       border: none;
       border-radius: 50%;
       padding: 12px 16px;
+      font-size: 20px;
       cursor: pointer;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-      transition: background-color 0.3s, transform 0.3s;
     }
 
-    #back-to-top:hover {
-      background-color: #0ea5e9;
-      transform: translateY(-2px);
-    }
-
-    /* ================= MOBILE RESPONSIVE ================= */
     @media (max-width: 768px) {
-
-      header {
-        padding: 2rem 1rem;
-      }
-
-      header img {
-        width: 140px;
-        height: 140px;
-      }
-
-      header h1 {
-        font-size: 1.8rem;
-      }
-
-      header p {
-        font-size: 1rem;
-      }
-
-      nav {
-        flex-direction: column;
-        align-items: center;
-      }
-
-      nav a {
-        margin: 0.4rem 0;
-        font-size: 0.95rem;
-      }
-
-      section {
-        margin: 2rem auto;
-      }
-
-      section h2 {
-        font-size: 1.5rem;
-      }
-
-      .card {
-        padding: 1.2rem;
-      }
-
-      .company-date {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 4px;
-      }
-
-      .company-date span {
-        font-size: 0.85rem;
-      }
-
-      .skill {
-        font-size: 0.8rem;
-        padding: 0.25rem 0.6rem;
-      }
-
-      #back-to-top {
-        bottom: 20px;
-        right: 20px;
-        font-size: 20px;
-        padding: 10px 14px;
-      }
+      header img { width: 140px; height: 140px; }
+      header h1 { font-size: 1.8rem; }
+      nav { flex-direction: column; }
+      .company-date { flex-direction: column; gap: 4px; }
     }
   </style>
 </head>
@@ -292,96 +181,141 @@
 </header>
 
 <nav>
-  <a href="#about">About Me</a>
-  <a href="#experience">Work Experience</a>
+  <a href="#about">About</a>
+  <a href="#experience">Experience</a>
   <a href="#education">Education</a>
   <a href="#skills">Skills</a>
   <a href="#contact">Contact</a>
 </nav>
 
-<!-- SECTIONS (unchanged content) -->
-
-<!-- About -->
 <section id="about">
   <h2>About Me</h2>
   <div class="card timeline">
     <p>
-      This is Mithilesh, an Automation Engineer with 6 years of experience, currently working as a DCS Engineer
-      (Siemens PCS 7) in the chemical industry...
+      Automation Engineer with 6 years of experience across instrumentation, PLC, HMI, and DCS systems.
+      Currently working as a Siemens PCS 7 DCS Engineer in the chemical industry.
+      Strong background in Industry 4.0, IIoT, and automation standards.
     </p>
   </div>
 </section>
 
-<!-- Experience -->
 <section id="experience">
   <h2>Work Experience</h2>
   <div class="card timeline">
-    <!-- Experience items unchanged -->
+
+    <div class="timeline-item">
+      <h3>Automation Engineer – Siemens PCS 7</h3>
+      <div class="company-date">
+        <h4>ECO3 GmbH</h4>
+        <span>Sept 2024 – Present | Wiesbaden, Germany</span>
+      </div>
+    </div>
+
+    <div class="timeline-item">
+      <h3>Working Student – OT & IIoT / Master Thesis (AR & VR)</h3>
+      <div class="company-date">
+        <h4>Döhler GmbH</h4>
+        <span>Apr 2023 – Mar 2024 | Darmstadt, Germany</span>
+      </div>
+    </div>
+
+    <div class="timeline-item">
+      <h3>Intern – Automation Software</h3>
+      <div class="company-date">
+        <h4>IOCTO GmbH</h4>
+        <span>Sept 2022 – Mar 2023 | Kriftel, Germany</span>
+      </div>
+    </div>
+
+    <div class="timeline-item">
+      <h3>Instrumentation Design Engineer</h3>
+      <div class="company-date">
+        <h4>Worley Energy & Chemicals</h4>
+        <span>Sept 2018 – Jun 2021 | Navi Mumbai, India</span>
+      </div>
+    </div>
+
   </div>
 </section>
 
-<!-- Education -->
 <section id="education">
   <h2>Education</h2>
-  <div class="card timeline"></div>
+  <div class="card timeline">
+
+    <div class="timeline-item">
+      <h3>M.Sc. Electrical Engineering & IT (Automation)</h3>
+      <div class="company-date">
+        <h4>Hochschule Darmstadt</h4>
+        <span>Sept 2021 – Aug 2024 | Germany</span>
+      </div>
+    </div>
+
+    <div class="timeline-item">
+      <h3>B.Tech Instrumentation & Control Engineering</h3>
+      <div class="company-date">
+        <h4>Manipal Institute of Technology</h4>
+        <span>Aug 2014 – May 2018 | India</span>
+      </div>
+    </div>
+
+  </div>
 </section>
 
-<!-- Skills -->
 <section id="skills">
   <h2>Skills</h2>
-  <div class="card timeline"></div>
+  <div class="card timeline">
+
+    <div class="skills-boxes">
+      <div class="skill">Siemens PCS 7</div>
+      <div class="skill">TIA Portal</div>
+      <div class="skill">WinCC</div>
+      <div class="skill">PLC Programming</div>
+      <div class="skill">OPC UA</div>
+      <div class="skill">MQTT</div>
+      <div class="skill">Node-RED</div>
+      <div class="skill">Grafana</div>
+      <div class="skill">Industry 4.0</div>
+      <div class="skill">IIoT</div>
+    </div>
+
+  </div>
 </section>
 
-<!-- Contact -->
 <section id="contact">
   <h2>Contact</h2>
-  <div class="card timeline"></div>
+  <div class="card timeline">
+    <p>Email: <a href="mailto:tpmithileshwaran@gmail.com">tpmithileshwaran@gmail.com</a></p>
+    <p>LinkedIn: <a href="https://www.linkedin.com/in/tpmithileshwaran/" target="_blank">linkedin.com/in/tpmithileshwaran</a></p>
+  </div>
 </section>
 
 <footer>
   <p>© Mithileshwaran T P</p>
 </footer>
 
-<button id="back-to-top" title="Go to top">↑</button>
+<button id="back-to-top">↑</button>
 
 <script>
   document.addEventListener("DOMContentLoaded", () => {
-    const roles = [
-      "Automation Engineer",
-      "Instrumentation Engineer",
-      "Industry 4.0 Enthusiast"
-    ];
-
-    let roleIndex = 0;
-    const roleElement = document.getElementById("role-text");
+    const roles = ["Automation Engineer","Instrumentation Engineer","Industry 4.0 Enthusiast"];
+    let i = 0;
+    const roleText = document.getElementById("role-text");
 
     setInterval(() => {
-      roleElement.classList.add("fade-out");
+      roleText.classList.add("fade-out");
       setTimeout(() => {
-        roleIndex = (roleIndex + 1) % roles.length;
-        roleElement.textContent = roles[roleIndex];
-        roleElement.classList.remove("fade-out");
-      }, 800);
+        i = (i + 1) % roles.length;
+        roleText.textContent = roles[i];
+        roleText.classList.remove("fade-out");
+      }, 700);
     }, 3000);
 
-    const backToTopButton = document.getElementById("back-to-top");
-
+    const btn = document.getElementById("back-to-top");
     window.addEventListener("scroll", () => {
-      backToTopButton.style.display = window.scrollY > 200 ? "block" : "none";
+      btn.style.display = window.scrollY > 200 ? "block" : "none";
     });
 
-    backToTopButton.addEventListener("click", () => {
-      window.scrollTo({ top: 0, behavior: "smooth" });
-    });
-
-    document.querySelectorAll("nav a").forEach(link => {
-      link.addEventListener("click", e => {
-        e.preventDefault();
-        const target = document.getElementById(link.getAttribute("href").slice(1));
-        const offset = window.innerWidth < 768 ? 80 : 50;
-        window.scrollTo({ top: target.offsetTop - offset, behavior: "smooth" });
-      });
-    });
+    btn.onclick = () => window.scrollTo({ top: 0, behavior: "smooth" });
   });
 </script>
 

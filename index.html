@@ -25,43 +25,53 @@
 }
 
 /* HEADER */
-header p {
-  color: #475569;
+/* HEADER */
+header {
+  background: #ffffff;
+  padding: 3rem 1rem 2.5rem;
+  text-align: center;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
+
+/* Photo background (blue circle) */
 .photo-wrapper {
-  display: inline-flex;
+  display: flex;
   justify-content: center;
   align-items: center;
-  
-  padding: 14px;
+
+  background: #e0f2fe; /* light blue */
+  padding: 16px;
   border-radius: 50%;
   margin-bottom: 1rem;
 }
 
+/* Profile image */
 header img {
   width: 200px;
   height: 200px;
   border-radius: 50%;
   object-fit: cover;
   background: white;
+  border: none;
+  display: block;
 }
 
-header img {
-  width: 200px;
-  height: 200px;
-  border-radius: 50% / 35%;
-  margin-bottom: 1rem;
-  object-fit: cover;
-}
+/* Name */
 header h1 {
-  margin: 0.5rem 0;
+  margin: 0.75rem 0 0.25rem;
   font-size: 2.5rem;
   font-weight: 700;
+  color: #0f172a;
 }
+
+/* Role text */
 header p {
   margin: 0;
   font-size: 1.2rem;
-  color: #e2e8f0;
+  color: #475569;
 }
 
 /* NAV */

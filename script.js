@@ -52,5 +52,16 @@ if (certMenuBtn && certMenu) {
     });
 }
 
+    // Certificates page mobile menu
+const certMenuBtn = document.getElementById('cert-menu-btn');
+const certMenu = document.getElementById('certMenu');
+
+if (certMenuBtn && certMenu) {
+    certMenuBtn.addEventListener('click', () => {
+        certMenu.classList.toggle('active');
+    });
+}
+
+
     setInterval(rotateText, 2000);
 });

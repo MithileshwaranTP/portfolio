@@ -13,12 +13,12 @@ header {
     color: #fff;
 }
 .profile-pic {
-    width: 200px;          /* Small size like your old profile */
-    height: 200px;
+    width: 250px;          /* Small size like your old profile */
+    height: 250px;
     border-radius: 50%;   /* Makes it perfectly round */
     object-fit: cover;    /* Ensures the image fits inside the circle */
-    margin-bottom: 0.5rem;
-    border: 2px solid #00aaff;  /* Optional colored border */
+    margin-bottom: 1.5rem;
+    border: 4px solid #00aaff;  /* Optional colored border */
 }
 
 .navbar {
@@ -65,8 +65,8 @@ header {
     justify-content: center;
     align-items: center;
     text-align: center;
-    height: 80vh;
-    gap: 0.5rem;
+    height: 100vh;
+    gap: 1rem;
 }
 
 

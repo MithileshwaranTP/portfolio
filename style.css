@@ -255,6 +255,45 @@ section p, section li {
     color: #555;
     font-size: 1.1rem;
 }
+/* Certificates mobile home menu */
+.mobile-home-menu {
+    position: fixed;
+    top: 15px;
+    right: 15px;
+    z-index: 1000;
+}
+
+#cert-menu-btn {
+    font-size: 1.8rem;
+    color: #0d1b2a;
+    cursor: pointer;
+}
+
+/* Hidden by default */
+.cert-menu-links {
+    display: none;
+    position: absolute;
+    top: 35px;
+    right: 0;
+    background: #0d1b2a;
+    padding: 0.6rem 1rem;
+    border-radius: 6px;
+}
+
+.cert-menu-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+.cert-menu-links a:hover {
+    color: #00aaff;
+}
+
+/* Show menu */
+.cert-menu-links.active {
+    display: block;
+}
 
 /* ---------------- Footer ---------------- */
 footer {

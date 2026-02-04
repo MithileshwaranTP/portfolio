@@ -1,8 +1,4 @@
-html {
-    font-size: 18px; /* Base font size for desktop, bigger than usual 16px */
-}
-
-/* Reset */
+/* ---------------- Reset ---------------- */
 * {
     margin: 0;
     padding: 0;
@@ -11,7 +7,13 @@ html {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-/* Navbar */
+/* ---------------- Root Font Size ---------------- */
+html {
+    font-size: 18px; /* base font size for desktop */
+    scroll-behavior: smooth;
+}
+
+/* ---------------- Navbar ---------------- */
 header {
     background: #0d1b2a;
     color: #fff;
@@ -28,7 +30,7 @@ header {
 }
 
 .navbar .logo {
-    font-size: 1.8rem;
+    font-size: 2rem;
     font-weight: bold;
 }
 
@@ -42,6 +44,7 @@ header {
     text-decoration: none;
     padding: 0 1rem;
     transition: color 0.3s;
+    font-size: 1.2rem;
 }
 
 .navbar ul li a:hover {
@@ -50,11 +53,11 @@ header {
 
 #menu-btn {
     display: none;
-    font-size: 1.8rem;
+    font-size: 2rem;
     cursor: pointer;
 }
 
-/* Hero Section */
+/* ---------------- Hero Section ---------------- */
 .hero {
     display: flex;
     flex-direction: column;
@@ -77,21 +80,21 @@ header {
 }
 
 .hero h1 {
-    font-size: 3.5rem;
+    font-size: 3.8rem;
 }
 
 .hero p {
-    font-size: 2rem;
+    font-size: 2.2rem;
     color: #00aaff;
 }
 
-/* Sections */
+/* ---------------- Sections ---------------- */
 section {
     padding: 5rem 10%;
 }
 
 section h2 {
-    font-size: 2.4rem;
+    font-size: 2.6rem;
     margin-bottom: 2rem;
     color: #0d1b2a;
     border-bottom: 2px solid #00aaff;
@@ -100,15 +103,16 @@ section h2 {
 }
 
 section h3 {
-    font-size: 1.6rem;
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
 }
 
 section p, section li {
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     line-height: 1.7;
 }
 
-/* Skills */
+/* ---------------- Skills ---------------- */
 .skills-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -121,7 +125,7 @@ section p, section li {
     border-radius: 8px;
 }
 
-/* Experience & Education */
+/* ---------------- Experience & Education ---------------- */
 .experience-item, .education-item {
     margin-bottom: 1.5rem;
 }
@@ -143,16 +147,16 @@ section p, section li {
 
 .experience-item ul li, .education-item ul li {
     margin-bottom: 0.4rem;
-    font-size: 1.05rem;
+    font-size: 1.1rem;
 }
 
 .experience-item p, .education-item p {
     margin-top: 0.5rem;
-    font-size: 1.05rem;
+    font-size: 1.1rem;
     line-height: 1.6;
 }
 
-/* Blogs */
+/* ---------------- Blogs ---------------- */
 #blogs ul {
     list-style: disc;
     margin-left: 2rem;
@@ -161,25 +165,25 @@ section p, section li {
 #blogs a {
     text-decoration: none;
     color: #00aaff;
-    font-size: 1.1rem;
+    font-size: 1.2rem;
 }
 
 #blogs a:hover {
     text-decoration: underline;
 }
 
-/* Contact */
+/* ---------------- Contact ---------------- */
 #contact a {
     color: #00aaff;
     text-decoration: none;
-    font-size: 1.1rem;
+    font-size: 1.2rem;
 }
 
 #contact a:hover {
     text-decoration: underline;
 }
 
-/* Certificates */
+/* ---------------- Certificates ---------------- */
 .certificate-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -199,19 +203,19 @@ section p, section li {
 
 .certificate-item p {
     color: #555;
-    font-size: 1.05rem;
+    font-size: 1.1rem;
 }
 
-/* Footer */
+/* ---------------- Footer ---------------- */
 footer {
     text-align: center;
     padding: 2rem;
     background: #0d1b2a;
     color: #fff;
-    font-size: 1rem;
+    font-size: 1.1rem;
 }
 
-/* Certificates carousel */
+/* ---------------- Certificates Carousel ---------------- */
 .carousel {
     overflow: hidden;
     width: 100%;
@@ -239,39 +243,29 @@ footer {
 
 /* Tablet */
 @media(max-width: 1024px) {
+    html { font-size: 17px; }
+
     section {
         padding: 4rem 8%;
     }
 
-    section h2 {
-        font-size: 2rem;
-    }
-
-    section h3 {
-        font-size: 1.4rem;
-    }
-
-    section p, section li {
-        font-size: 1rem;
-        line-height: 1.6;
-    }
+    section h2 { font-size: 2.2rem; }
+    section h3 { font-size: 1.6rem; }
+    section p, section li { font-size: 1.1rem; line-height: 1.6; }
 
     .skills-container, .certificate-grid {
         grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
         gap: 1.5rem;
     }
 
-    .hero h1 {
-        font-size: 3rem;
-    }
-
-    .hero p {
-        font-size: 1.8rem;
-    }
+    .hero h1 { font-size: 3.2rem; }
+    .hero p { font-size: 1.8rem; }
 }
 
 /* Mobile */
 @media(max-width: 768px) {
+    html { font-size: 16px; }
+
     .navbar ul {
         display: none;
         flex-direction: column;
@@ -282,87 +276,37 @@ footer {
         left: 0;
     }
 
-    .navbar ul li {
-        text-align: center;
-        margin: 1rem 0;
-    }
+    .navbar ul li { text-align: center; margin: 1rem 0; }
 
-    #menu-btn {
-        display: block;
-    }
+    #menu-btn { display: block; }
 
     section {
         padding: 3rem 5%;
     }
 
-    section h2 {
-        font-size: 1.8rem;
-    }
+    section h2 { font-size: 1.9rem; }
+    section h3 { font-size: 1.4rem; }
+    section p, section li { font-size: 1rem; line-height: 1.6; }
 
-    section h3 {
-        font-size: 1.3rem;
-    }
+    .skills-container, .certificate-grid { grid-template-columns: 1fr; gap: 1rem; }
 
-    section p, section li {
-        font-size: 1rem;
-        line-height: 1.6;
-    }
-
-    .skills-container, .certificate-grid {
-        grid-template-columns: 1fr;
-        gap: 1rem;
-    }
-
-    .hero {
-        min-height: auto;
-        gap: 1rem;
-    }
-
-    .profile-pic {
-        width: 180px;
-        height: 180px;
-        border: 3px solid #00aaff;
-    }
-
-    .hero h1 {
-        font-size: 2.4rem;
-    }
-
-    .hero p {
-        font-size: 1.6rem;
-    }
+    .hero { min-height: auto; gap: 1rem; }
+    .profile-pic { width: 180px; height: 180px; border: 3px solid #00aaff; }
+    .hero h1 { font-size: 2.6rem; }
+    .hero p { font-size: 1.5rem; }
 }
 
 /* Extra small phones */
 @media(max-width: 480px) {
-    section {
-        padding: 2rem 3%;
-    }
+    html { font-size: 15px; }
 
-    section h2 {
-        font-size: 1.6rem;
-    }
+    section { padding: 2rem 3%; }
 
-    section h3 {
-        font-size: 1.2rem;
-    }
+    section h2 { font-size: 1.6rem; }
+    section h3 { font-size: 1.2rem; }
+    section p, section li { font-size: 0.95rem; line-height: 1.5; }
 
-    section p, section li {
-        font-size: 1rem;
-        line-height: 1.5;
-    }
-
-    .profile-pic {
-        width: 140px;
-        height: 140px;
-        border: 2px solid #00aaff;
-    }
-
-    .hero h1 {
-        font-size: 2rem;
-    }
-
-    .hero p {
-        font-size: 1.4rem;
-    }
+    .profile-pic { width: 140px; height: 140px; border: 2px solid #00aaff; }
+    .hero h1 { font-size: 2rem; }
+    .hero p { font-size: 1.3rem; }
 }

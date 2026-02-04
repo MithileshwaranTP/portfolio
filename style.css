@@ -142,6 +142,26 @@ footer {
     background: #0d1b2a;
     color: #fff;
 }
+.certificate-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.certificate-item img {
+    width: 100%;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.certificate-item h3 {
+    margin-top: 0.5rem;
+    color: #0d1b2a;
+}
+
+.certificate-item p {
+    color: #555;
+}
 
 /* Responsive */
 @media(max-width:768px) {

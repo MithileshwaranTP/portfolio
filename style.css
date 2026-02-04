@@ -225,3 +225,40 @@ footer { text-align: center; padding: 2rem; background: #0d1b2a; color: #fff; fo
     .profile-pic { width: 140px; height: 140px; border: 2px solid #00aaff; }
     #dynamic-text { font-size: 1.3rem; }
 }
+/* ---------------- Hero Section Mobile Adjustments ---------------- */
+@media(max-width: 768px) {
+    .hero {
+        flex-direction: column;   /* keep vertical stacking */
+        align-items: center;      /* center content horizontally */
+        padding: 2rem 5%;         /* smaller padding for mobile */
+    }
+
+    .hero-left {
+        display: block;           /* ensure it is visible */
+        width: 100%;              /* full width */
+        text-align: center;       /* center text */
+        margin-top: 1rem;         /* spacing below profile pic */
+    }
+
+    #dynamic-text {
+        font-size: 1.5rem;        /* resize for mobile */
+        opacity: 1;               /* ensure visible */
+    }
+
+    .profile-pic {
+        width: 180px;
+        height: 180px;
+        border: 3px solid #00aaff;
+    }
+}
+
+@media(max-width: 480px) {
+    #dynamic-text {
+        font-size: 1.3rem;
+    }
+
+    .profile-pic {
+        width: 140px;
+        height: 140px;
+    }
+}

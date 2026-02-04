@@ -66,8 +66,9 @@ header {
     align-items: center;
     text-align: center;
     height: 80vh;
-    gap: 0.5rem;  /* spacing between photo, name, title */
+    gap: 0.5rem;
 }
+
 
 .hero h1 {
     font-size: 3rem;

@@ -1,3 +1,7 @@
+html {
+    font-size: 18px; /* Base font size for desktop, bigger than usual 16px */
+}
+
 /* Reset */
 * {
     margin: 0;

@@ -68,6 +68,12 @@ header {
     padding: 2rem 1rem;
     gap: 1rem;
     background: #0d1b2a;
+    
+    /* FIX for mobile overflow */
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    overflow-x: hidden;  /* prevents horizontal scroll / cutting */
 }
 
 .profile-pic {

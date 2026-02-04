@@ -43,7 +43,6 @@ body { min-height: 100vh; }
     font-size: 1.2rem;
     transition: color 0.3s;
 }
-
 .navbar ul li a:hover { color: #00aaff; }
 
 /* Hamburger menu hidden on desktop */
@@ -75,10 +74,16 @@ body { min-height: 100vh; }
     gap: 1.5rem;
 }
 
-#dynamic-text { font-size: 2.2rem; color: #00aaff; transition: opacity 0.5s; }
+#dynamic-text {
+    font-size: 2.2rem;
+    color: #00aaff;
+    transition: opacity 0.5s;
+}
 
 /* ---------------- Sections ---------------- */
-section { padding: 5rem 10%; }
+section {
+    padding: 5rem 10%;
+}
 section h2 {
     font-size: 2.6rem;
     margin-bottom: 2rem;
@@ -91,7 +96,11 @@ section h3 { font-size: 1.8rem; margin-bottom: 0.5rem; }
 section p, section li { font-size: 1.2rem; line-height: 1.7; }
 
 /* ---------------- Skills ---------------- */
-.skills-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; }
+.skills-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
 .skill-group { background: #f1f1f1; padding: 1rem; border-radius: 8px; }
 
 /* ---------------- Experience & Education ---------------- */
@@ -116,11 +125,47 @@ section p, section li { font-size: 1.2rem; line-height: 1.7; }
 /* ---------------- Certificates Carousel ---------------- */
 .carousel { overflow: hidden; width: 100%; margin-bottom: 3rem; }
 .carousel-track { display: flex; animation: scroll-left 20s linear infinite; }
-.carousel-track img { width: 250px; height: auto; border-radius: 8px; margin-right: 1rem; }
+.carousel-track img {
+    flex: 0 0 auto;      /* keep images in row */
+    width: auto;          /* width adjusts automatically */
+    height: 50vh;         /* fill section height, adjust as needed */
+    border-radius: 8px;
+    margin-right: 1rem;
+    object-fit: cover;    /* cover entire height without distortion */
+}
 @keyframes scroll-left { 0% { transform: translateX(100%); } 100% { transform: translateX(-100%); } }
 
 /* ---------------- Footer ---------------- */
 footer { text-align: center; padding: 2rem; background: #0d1b2a; color: #fff; font-size: 1.1rem; }
+
+/* ---------------- Certificates Page Home Link ---------------- */
+.cert-home-link {
+    font-size: 1.2rem;
+    text-decoration: none;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    transition: color 0.3s;
+}
+.cert-home-link:hover { color: #00aaff; }
+
+/* Desktop only for home link */
+@media(max-width: 768px) { .cert-home-link { display: none; } }
+
+/* ---------------- Mobile Certificate Menu ---------------- */
+#certMenu { display: none; }
+#certMenu.active {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background: #0d1b2a;
+    padding: 1rem;
+    border-radius: 6px;
+}
+#certMenu li { margin: 0.5rem 0; }
+#certMenu a { color: #fff; text-decoration: none; }
+#certMenu a:hover { color: #00aaff; }
 
 /* ---------------- Responsive ---------------- */
 
@@ -137,7 +182,7 @@ footer { text-align: center; padding: 2rem; background: #0d1b2a; color: #fff; fo
     section { padding: 3rem 5%; }
     .skills-container, .certificate-grid { grid-template-columns: 1fr; gap: 1rem; }
     .profile-pic { width: 180px; height: 180px; border: 3px solid #00aaff; }
-    #dynamic-text { font-size: 1.5rem; }
+    #dynamic-text { font-size: 1.5rem; opacity: 0 !important; } /* hide dynamic text when mobile menu opens */
 }
 
 /* Extra small phones */
@@ -147,38 +192,3 @@ footer { text-align: center; padding: 2rem; background: #0d1b2a; color: #fff; fo
     .profile-pic { width: 140px; height: 140px; border: 2px solid #00aaff; }
     #dynamic-text { font-size: 1.3rem; }
 }
-
-/* ---------------- Certificates Home Button on Desktop ---------------- */
-.cert-home-link {
-    margin-left: auto; /* push to right */
-    font-size: 1.2rem;
-    text-decoration: none;
-    color: #fff;
-    padding: 0.5rem 1rem;
-    transition: color 0.3s;
-}
-.cert-home-link:hover { color: #00aaff; }
-
-/* Mobile adjustments for cert home */
-@media(max-width: 768px) { .cert-home-link { display: none; } }
-/* Certificates page home link */
-.cert-home-link {
-    margin-left: auto; /* push to right */
-    font-size: 1.2rem;
-    text-decoration: none;
-    color: #fff;
-    display: inline-block;
-}
-.cert-home-link:hover { color: #00aaff; }
-
-/* Hide desktop Home link on mobile */
-@media(max-width: 768px) {
-    .cert-home-link { display: none; }
-}
-
-/* Hide mobile UL in desktop view */
-#certMenu { display: none; }
-#certMenu.active { display: flex; flex-direction: column; position: absolute; top: 60px; right: 0; background: #0d1b2a; padding: 1rem; border-radius: 6px; }
-#certMenu li { margin: 0.5rem 0; }
-#certMenu a { color: #fff; text-decoration: none; }
-#certMenu a:hover { color: #00aaff; }

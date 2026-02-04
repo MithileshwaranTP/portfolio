@@ -11,20 +11,16 @@
 html { font-size: 18px; }
 body { min-height: 100vh; }
 
-/* ---------------- Header & Navbar ---------------- */
-header {
-    background: #0d1b2a;
-    color: #fff;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-}
-
+/* ---------------- Navbar ---------------- */
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 1rem 2rem;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: #0d1b2a;
 }
 
 .logo {
@@ -33,7 +29,6 @@ header {
     color: #fff;
     text-decoration: none;
 }
-
 .logo:hover { color: #00aaff; }
 
 .navbar ul {
@@ -62,6 +57,7 @@ header {
     padding: 2rem 10%;
     min-height: 50vh;
     background: #0d1b2a;
+    width: 100%;
 }
 
 .profile-pic {
@@ -126,7 +122,6 @@ section p, section li { font-size: 1.2rem; line-height: 1.7; }
 /* ---------------- Footer ---------------- */
 footer { text-align: center; padding: 2rem; background: #0d1b2a; color: #fff; font-size: 1.1rem; }
 
-
 /* ---------------- Responsive ---------------- */
 
 /* Tablet */
@@ -165,19 +160,4 @@ footer { text-align: center; padding: 2rem; background: #0d1b2a; color: #fff; fo
 .cert-home-link:hover { color: #00aaff; }
 
 /* Mobile adjustments for cert home */
-@media(max-width: 768px) {
-    .cert-home-link { display: none; }
-}
-.cert-home-link {
-    margin-left: auto; /* push to right */
-    font-size: 1.2rem;
-    text-decoration: none;
-    color: #fff;
-}
-.cert-home-link:hover { color: #00aaff; }
-
-/* Hide on mobile */
-@media(max-width: 768px) {
-    .cert-home-link { display: none; }
-}
-
+@media(max-width: 768px) { .cert-home-link { display: none; } }

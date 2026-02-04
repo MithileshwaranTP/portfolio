@@ -1,474 +1,138 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Mithileshwaran's Portfolio</title>
-
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
-  <style>
-    body {
-      font-family: 'Poppins', sans-serif;
-      margin: 0;
-      background-color: #f9fafb;
-      color: #111827;
-      font-size: 16px;
-      line-height: 1.7;
-      overflow-x: hidden;
-    }
-
-    a { text-decoration: none; color: inherit; }
-
-    header {
-      background: #ffffff;
-      padding: 3rem 1rem 2.5rem;
-      text-align: center;
-    }
-
-    .photo-wrapper {
-      display: inline-flex;
-      justify-content: center;
-      align-items: center;
-      background: #e0f2fe;
-      padding: 16px;
-      border-radius: 50%;
-      margin-bottom: 1rem;
-    }
-
-    header img {
-      width: 200px;
-      height: 200px;
-      max-width: 100%;
-      border-radius: 50%;
-      object-fit: cover;
-    }
-
-    header h1 {
-      margin: 0.75rem 0 0.25rem;
-      font-size: 2.5rem;
-      font-weight: 700;
-      color: #0f172a;
-    }
-
-    header p {
-      margin: 0;
-      font-size: 1.2rem;
-      color: #475569;
-      transition: opacity 0.6s ease-in-out;
-    }
-
-    .fade-out { opacity: 0; }
-
-    nav {
-      background: #0f172a;
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      padding: 0.75rem;
-    }
-
-    nav a {
-      color: #f1f5f9;
-      margin: 0.5rem 1rem;
-      font-weight: 600;
-      padding: 0.4rem 0.8rem;
-    }
-
-    nav a:hover { color: #38bdf8; }
-
-    section {
-      max-width: 1000px;
-      margin: 3rem auto;
-      padding: 0 1rem;
-    }
-
-    section h2 {
-      font-size: 2rem;
-      font-weight: 700;
-      margin-bottom: 1.5rem;
-      color: #0f172a;
-      border-left: 6px solid #38bdf8;
-      padding-left: 0.75rem;
-    }
-
-    .card {
-      background: white;
-      border-radius: 0.75rem;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-      padding: 1.5rem;
-      margin-bottom: 1.5rem;
-    }
-
-    .timeline {
-      border-left: 3px solid #38bdf8;
-      padding-left: 1rem;
-    }
-
-    .timeline-item { margin-bottom: 1.5rem; }
-
-    .company-date {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      font-style: italic;
-      margin-bottom: 1rem;
-    }
-
-    .company-date h4 {
-      margin: 0;
-      font-weight: 600;
-      color: #38bdf8;
-    }
-
-    .company-date span {
-      font-family: monospace;
-      font-size: 0.9em;
-      color: #555;
-    }
-
-    .skill-category { margin-bottom: 1.5rem; }
-
-    .skill-category h3 {
-      margin-bottom: 0.5rem;
-      font-weight: 600;
-      font-size: 1.2rem;
-      color: #1e293b;
-    }
-
-    .skills-boxes {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-    }
-
-    .skill {
-      background-color: #f1f5f9;
-      color: #1e293b;
-      padding: 0.3rem 0.8rem;
-      border-radius: 0.35rem;
-      font-size: 0.85rem;
-      border: 1px solid #e2e8f0;
-    }
-
-
-    .blog-card a {
-    display: flex;
-    align-items: center;
-    gap: 16px;
-    }
-
-    .blogs-container {
-    display: flex;
-    gap: 20px;              
-    justify-content: left; 
-    flex-wrap: wrap;        
-    }
-    .blog-card img {
-    width: 200px !important;
-    height: 150px !important;
-    max-width: 200px;
-    max-height: 150px;
-    object-fit: cover;
-    flex-shrink: 0;
-    border-radius: 8px;
-    }
-
-
-    footer {
-      background: #1e293b;
-      color: #cbd5e1;
-      text-align: center;
-      padding: 1.5rem;
-    }
-
-    #back-to-top {
-      display: none;
-      position: fixed;
-      bottom: 30px;
-      right: 30px;
-      background-color: #38bdf8;
-      color: white;
-      border: none;
-      border-radius: 50%;
-      padding: 12px 16px;
-      font-size: 24px;
-      cursor: pointer;
-    }
-
-    @media (max-width: 768px) {
-      header img { width: 140px; height: 140px; }
-      header h1 { font-size: 1.8rem; }
-      header p { font-size: 1rem; }
-      nav { flex-direction: column; }
-      .company-date { flex-direction: column; align-items: flex-start; gap: 4px; }
-      section h2 { font-size: 1.5rem; }
-    }
-    /* Contact section link behavior */
-#contact a {
-  text-decoration: underline;
-  text-decoration-color: transparent;
-  transition: text-decoration-color 0.2s ease;
-}
-
-#contact a:hover,
-#contact a:focus {
-  text-decoration-color: currentColor;
-}
-
-  </style>
+  
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mithileshwaran T P | Automation Engineer</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
-
 <body>
 
-<header>
-  <div class="photo-wrapper">
-    <img src="Mithileshwaran_TP.png" alt="Mithileshwaran T P">
-  </div>
-  <h1>Mithileshwaran T P</h1>
-  <p id="role-text">Automation Engineer</p>
-</header>
+    <!-- Header / Navbar -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">Mithileshwaran T P</div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#blogs">Blogs</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <i class="fas fa-bars" id="menu-btn"></i>
+        </nav>
+        <div class="hero">
+            <h1>Mithileshwaran T P</h1>
+            <p>Automation Engineer</p>
+        </div>
+    </header>
 
-<nav>
-  <a href="#about">About Me</a>
-  <a href="#experience">Work Experience</a>
-  <a href="#education">Education</a>
-  <a href="#skills">Skills</a>
-  <a href="#blogs">Blogs</a>
-  <a href="#contact">Contact</a>
-</nav>
+    <!-- About Me -->
+    <section id="about">
+        <h2>About Me</h2>
+        <p>
+            This is Mithilesh, an Automation Engineer with 6 years of experience, currently working as a DCS Engineer (Siemens PCS 7) in the chemical industry. With a Master’s in Automation (Germany) and a Bachelor's in Instrumentation & Control, I’ve grown from field instrumentation to PLC, HMI, and DCS systems along the ISA‑95 automation pyramid.
+        </p>
+        <p>
+            I am enthusiastic about working in collaborative team environments, continuously honing my managerial and leadership skills, and driving collective success. I look to collaborate with like-minded professionals to learn and contribute in my field.
+        </p>
+    </section>
 
-<!-- ABOUT -->
-<section id="about">
-  <h2>About Me</h2>
-  <div class="card timeline">
-    <p>
-      This is Mithilesh, an Automation Engineer with 6 years of experience, currently working as a DCS Engineer
-      (Siemens PCS 7) in the chemical industry. With a Master’s in Automation (Germany) and a Bachelor's in
-      Instrumentation & Control, I’ve grown from field instrumentation to PLC, HMI, and DCS systems along the
-      ISA-95 automation pyramid.
-      <br><br>
-      I am enthusiastic about working in collaborative team environments, continuously honing my managerial
-      and leadership skills, and driving collective success. I look to collaborate with like-minded professionals
-      to learn and contribute in my field.
-    </p>
-  </div>
-</section>
+    <!-- Skills -->
+    <section id="skills">
+        <h2>Skills</h2>
+        <div class="skills-container">
+            <div class="skill-group">
+                <h3>Industrial Automation</h3>
+                <p>Simatic PCS7, STEP 7, WinCC, TIA Portal, STEP 5</p>
+            </div>
+            <div class="skill-group">
+                <h3>PLC Programming</h3>
+                <p>CFC, SCL, SFC, FBD, LAD</p>
+            </div>
+            <div class="skill-group">
+                <h3>Engineering Standards</h3>
+                <p>IEC 61131‑3, Ex‑Proof (TÜV), ISO 13849‑1, ISA 88/95/100.11a</p>
+            </div>
+            <div class="skill-group">
+                <h3>Network Protocols</h3>
+                <p>Profinet, Profibus, OPC‑UA, MQTT, Modbus</p>
+            </div>
+            <div class="skill-group">
+                <h3>Other Tools</h3>
+                <p>Node-RED, Grafana, InfluxDB, VMWare ESXi, MS Excel, MS Visio</p>
+            </div>
+            <div class="skill-group">
+                <h3>Programming</h3>
+                <p>C, C++, JavaScript, VB Script</p>
+            </div>
+            <div class="skill-group">
+                <h3>Engineering Software</h3>
+                <p>Smart Plant Instrumentation (SPI), MATLAB & Simulink, LabVIEW</p>
+            </div>
+            <div class="skill-group">
+                <h3>Languages</h3>
+                <p>Deutsch (B2.1), English (C1)</p>
+            </div>
+        </div>
+    </section>
 
-<!-- EXPERIENCE -->
-<section id="experience">
-  <h2>Work Experience</h2>
-  <div class="card timeline">
+    <!-- Experience -->
+    <section id="experience">
+        <h2>Work Experience</h2>
+        <div class="experience-item">
+            <h3>Automation Engineer (Siemens PCS7)</h3>
+            <span>ECO3 GmbH | Sept 2024 – Present</span>
+        </div>
+        <div class="experience-item">
+            <h3>Working Student in Digital Transformation & OT</h3>
+            <span>Döhler GmbH | Apr 2023 – Mar 2024</span>
+        </div>
+        <div class="experience-item">
+            <h3>Automation Software Intern</h3>
+            <span>IOCTO GmbH | Sept 2022 – Mar 2023</span>
+        </div>
+        <div class="experience-item">
+            <h3>Instrumentation Design Engineer</h3>
+            <span>Worley Energy & Chemicals | Sept 2018 – Jun 2021</span>
+        </div>
+    </section>
 
-    <div class="timeline-item">
-      <h3>Automation Engineer (Siemens PCS7)</h3>
-      <div class="company-date">
-        <h4>ECO3 GmbH</h4>
-        <span>Sept 2024 – Present | Wiesbaden, Germany</span>
-      </div>
-    </div>
+    <!-- Education -->
+    <section id="education">
+        <h2>Education</h2>
+        <div class="education-item">
+            <h3>Master of Science in Electrical Engineering & IT (Automation)</h3>
+            <span>University of Applied Sciences Darmstadt | Sept 2021 – Aug 2024</span>
+        </div>
+        <div class="education-item">
+            <h3>Bachelor of Technology in Instrumentation & Control Engineering</h3>
+            <span>Manipal Institute of Technology | Aug 2014 – May 2018</span>
+        </div>
+    </section>
 
-    <div class="timeline-item">
-      <h3>Working Student in Digital Transformation & OT</h3>
-      <div class="company-date">
-        <h4>Döhler GmbH</h4>
-        <span>Apr 2023 – Mar 2024 | Darmstadt, Germany</span>
-      </div>
-    </div>
+    <!-- Blogs -->
+    <section id="blogs">
+        <h2>Blogs</h2>
+        <ul>
+            <li><a href="https://medium.com/@tpmithileshwaran">Visit my Medium blog for posts</a></li>
+        </ul>
+    </section>
 
-    <div class="timeline-item">
-      <h3>Automation Software Intern</h3>
-      <div class="company-date">
-        <h4>IOCTO GmbH</h4>
-        <span>Sept 2022 – Mar 2023 | Kriftel, Germany</span>
-      </div>
-    </div>
+    <!-- Contact -->
+    <section id="contact">
+        <h2>Contact</h2>
+        <p>Email: <a href="mailto:tpmithileshwaran@gmail.com">tpmithileshwaran@gmail.com</a></p>
+        <p>LinkedIn: <a href="https://www.linkedin.com/in/tpmithileshwaran/">linkedin.com/in/tpmithileshwaran</a></p>
+    </section>
 
-    <div class="timeline-item">
-      <h3>Instrumentation Design Engineer</h3>
-      <div class="company-date">
-        <h4>Worley Energy & Chemicals</h4>
-        <span>Sept 2018 – June 2021 | Navi Mumbai, India</span>
-      </div>
-    </div>
+    <footer>
+        <p>&copy; 2026 Mithileshwaran T P. All rights reserved.</p>
+    </footer>
 
-  </div>
-</section>
-
-<!-- EDUCATION -->
-<section id="education">
-  <h2>Education</h2>
-  <div class="card timeline">
-    <div class="timeline-item">
-      <h3>Master of Science in Electrical Engineering & IT (Automation)</h3>
-      <div class="company-date">
-        <h4>University of Applied Sciences Darmstadt</h4>
-        <span>Sept 2021 – Aug 2024 | Darmstadt, Germany</span>
-      </div>
-    </div>
-
-    <div class="timeline-item">
-      <h3>Bachelor of Technology in Instrumentation & Control Engineering</h3>
-      <div class="company-date">
-        <h4>Manipal Institute of Technology</h4>
-        <span>Aug 2014 – May 2018 | Manipal, India</span>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- SKILLS (FULLY RESTORED) -->
-<section id="skills">
-  <h2>Skills</h2>
-  <div class="card timeline">
-
-    <div class="skill-category">
-      <h3>Industrial Automation:</h3>
-      <div class="skills-boxes">
-        <div class="skill">Simatic PCS7</div>
-        <div class="skill">STEP 7</div>
-        <div class="skill">WinCC</div>
-        <div class="skill">TIA Portal</div>
-        <div class="skill">STEP 5</div>
-      </div>
-    </div>
-
-    <div class="skill-category">
-      <h3>PLC Programming:</h3>
-      <div class="skills-boxes">
-        <div class="skill">CFC</div>
-        <div class="skill">SCL</div>
-        <div class="skill">SFC</div>
-        <div class="skill">FBD</div>
-        <div class="skill">LAD</div>
-      </div>
-    </div>
-
-    <div class="skill-category">
-      <h3>Engineering Standards:</h3>
-      <div class="skills-boxes">
-        <div class="skill">IEC 61131-3</div>
-        <div class="skill">Ex-Proof (TÜV)</div>
-        <div class="skill">ISO 13849-1</div>
-        <div class="skill">ISA 88, 95, 100.11a</div>
-      </div>
-    </div>
-
-    <div class="skill-category">
-      <h3>Network Protocols:</h3>
-      <div class="skills-boxes">
-        <div class="skill">Profinet</div>
-        <div class="skill">Profibus</div>
-        <div class="skill">OPC-UA</div>
-        <div class="skill">MQTT</div>
-        <div class="skill">Modbus</div>
-      </div>
-    </div>
-
-    <div class="skill-category">
-      <h3>Other Tools:</h3>
-      <div class="skills-boxes">
-        <div class="skill">Node-RED</div>
-        <div class="skill">Grafana</div>
-        <div class="skill">Influx DB</div>
-        <div class="skill">VMWare ESXi</div>
-        <div class="skill">MS Excel</div>
-        <div class="skill">MS Visio</div>
-      </div>
-    </div>
-
-    <div class="skill-category">
-      <h3>Programming:</h3>
-      <div class="skills-boxes">
-        <div class="skill">C</div>
-        <div class="skill">C++</div>
-        <div class="skill">JavaScript</div>
-        <div class="skill">VB Script</div>
-      </div>
-    </div>
-
-    <div class="skill-category">
-      <h3>Engineering Software:</h3>
-      <div class="skills-boxes">
-        <div class="skill">Smart Plant Instrumentation (SPI)</div>
-        <div class="skill">MATLAB & Simulink</div>
-        <div class="skill">LabVIEW</div>
-      </div>
-    </div>
-
-    <div class="skill-category">
-      <h3>Languages:</h3>
-      <div class="skills-boxes">
-        <div class="skill">Deutsch (B2.1)</div>
-        <div class="skill">English (C1)</div>
-      </div>
-    </div>
-
-  </div>
-</section>
-
-<!-- BLOGS -->
-<section id="blogs">
-  <h2>Blogs</h2>
-  <div class="blogs-container">
-    <div class="blog-card">
-      <a href="https://medium.com/@tpmithileshwaran/introduction-to-drive-technology-d71e30a30033" target="_blank">
-        <img src="drive.png">
-      </a>
-    </div>
-    <div class="blog-card">
-      <a href="https://medium.com/@tpmithileshwaran/climbing-the-automation-pyramid-c195650290e7?postPublishedType=repub" target="_blank">
-        <img src="automation.png">
-      </a>
-    </div>
-    <div class="blog-card">
-      <a href="https://medium.com/@tpmithileshwaran/cybersecurity-in-ot-practical-risks-and-countermeasures-for-industrial-environments-9e62cc08b7d4" target="_blank">
-        <img src="cyber.png">
-      </a>
-    </div>
-  </div>
-</section>
-
-<!-- CONTACT -->
-<section id="contact">
-  <h2>Contact</h2>
-  <div class="card timeline">
-    <ul>
-      <li>Email: <a href="mailto:tpmithileshwaran@gmail.com">tpmithileshwaran@gmail.com</a></li>
-      <li>LinkedIn: <a href="https://www.linkedin.com/in/tpmithileshwaran/" target="_blank">linkedin.com/in/tpmithileshwaran</a></li>
-    </ul>
-  </div>
-</section>
-
-<footer>
-  <p>© Mithileshwaran T P</p>
-</footer>
-
-<button id="back-to-top">↑</button>
-
-<script>
-  document.addEventListener("DOMContentLoaded", () => {
-    const roles = ["Automation Engineer","Instrumentation Engineer","Industry 4.0 Enthusiast"];
-    let i = 0;
-    const roleText = document.getElementById("role-text");
-
-    setInterval(() => {
-      roleText.classList.add("fade-out");
-      setTimeout(() => {
-        i = (i + 1) % roles.length;
-        roleText.textContent = roles[i];
-        roleText.classList.remove("fade-out");
-      }, 800);
-    }, 3000);
-
-    const btn = document.getElementById("back-to-top");
-    window.addEventListener("scroll", () => {
-      btn.style.display = window.scrollY > 200 ? "block" : "none";
-    });
-
-    btn.onclick = () => window.scrollTo({ top: 0, behavior: "smooth" });
-  });
-</script>
-
+    <script src="script.js"></script>
 </body>
 </html>

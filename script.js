@@ -9,8 +9,7 @@ menuBtn.addEventListener('click', () => {
 const texts = [
     "Automation Engineer",
     "Instrumentation Engineer",
-    "Industry 4.0 Enthusiast",
-    "IIoT Specialist"
+    "Industry 4.0 Enthusiast"
 ];
 
 let index = 0;

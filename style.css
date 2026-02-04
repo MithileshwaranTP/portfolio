@@ -122,53 +122,33 @@ section p, section li { font-size: 1.2rem; line-height: 1.7; }
 .contact-item i { font-size: 1.5rem; }
 .contact-item:hover { color: #0088cc; }
 
-/* Certificates Carousel – manual scroll version */
+/* ---------------- Certificates Carousel (manual scroll) ---------------- */
 .carousel {
-    overflow-x: auto;       /* enable horizontal scroll */
-    overflow-y: hidden;     /* hide vertical scroll */
-    display: flex;          /* horizontal layout */
-    gap: 1rem;              /* space between images */
-    padding-bottom: 1rem;   /* give a little space for scrollbar */
-    scroll-behavior: smooth; /* smooth scrolling */
-    -webkit-overflow-scrolling: touch; /* smooth scroll on iOS */
+    overflow-x: auto;       /* allow horizontal scroll */
+    scroll-behavior: smooth;
+    width: 100%;
+    margin-bottom: 3rem;
 }
 
 .carousel-track {
     display: flex;
-    flex-wrap: nowrap;      /* prevent wrapping to next line */
+    gap: 1rem;             /* space between images */
+    scroll-snap-type: x mandatory; /* snap scrolling */
 }
 
 .carousel-track img {
-    flex: 0 0 auto;         /* prevent images from shrinking */
-    width: 300px;           /* fixed image width */
-    height: auto;           /* maintain aspect ratio */
+    flex: 0 0 auto;        /* do not shrink, maintain width */
+    width: 300px;          /* desktop size, can adjust */
+    height: auto;
     border-radius: 8px;
-    cursor: pointer;        /* optional, shows it’s scrollable/clickable */
-    transition: transform 0.3s;
+    scroll-snap-align: start; /* snap each image */
 }
 
-.carousel-track img:hover {
-    transform: scale(1.05); /* optional hover effect */
-}
 
-/* Optional: hide scrollbar for cleaner look */
-.carousel::-webkit-scrollbar {
-    height: 8px;
-}
-.carousel::-webkit-scrollbar-thumb {
-    background-color: #00aaff;
-    border-radius: 4px;
-}
-.carousel::-webkit-scrollbar-track {
-    background: #f1f1f1;
-}
-
-/* Mobile adjustments for carousel */
 @media(max-width: 768px) {
     .carousel-track img {
-        width: 100%;       /* full width of the carousel container */
-        height: auto;      /* maintain aspect ratio */
-        flex: 0 0 auto;    /* prevent shrinking */
+        width: 100%;       /* full width of the container */
+        height: auto;
     }
 }
 

@@ -235,15 +235,28 @@ footer {
     }
 
     section h2 {
-        font-size: 1.8rem;
+        font-size: 1.9rem;
     }
 
     section h3 {
-        font-size: 1.1rem;
+        font-size: 1.3rem;
     }
 
     section p, section li {
-        font-size: 0.95rem;
+        font-size: 1rem;         /* base text readable like Wikipedia */
+        line-height: 1.6;
+    }
+    .skills-container, .certificate-grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* flexible grid */
+        gap: 1.5rem;
+    }
+
+    .hero h1 {
+        font-size: 3rem;         /* scale hero name */
+    }
+
+    .hero p {
+        font-size: 1.8rem;       /* scale hero title */
     }
 }
 
@@ -273,15 +286,16 @@ footer {
     }
 
     section h2 {
-        font-size: 1.6rem;
+        font-size: 1.8rem;
     }
 
     section h3 {
-        font-size: 1rem;
+        font-size: 1.3rem;
     }
 
     section p, section li {
-        font-size: 0.9rem;
+        font-size: 1rem;
+        line-height: 1.6;
     }
 
     .skills-container, .certificate-grid {
@@ -302,11 +316,11 @@ footer {
     }
 
     .hero h1 {
-        font-size: 2rem;
+        font-size: 2.4rem;
     }
 
     .hero p {
-        font-size: 1.2rem;
+        font-size: 1.6rem;
     }
 }
 
@@ -317,15 +331,16 @@ footer {
     }
 
     section h2 {
-        font-size: 1.4rem;
+        font-size: 1.6rem;
     }
 
     section h3 {
-        font-size: 0.95rem;
+        font-size: 1.2rem;
     }
 
     section p, section li {
-        font-size: 0.85rem;
+        font-size: 1rem;
+        line-height: 1.5; 
     }
 
     .profile-pic {
@@ -335,10 +350,10 @@ footer {
     }
 
     .hero h1 {
-        font-size: 1.5rem;
+        font-size: 2rem;
     }
 
     .hero p {
-        font-size: 1rem;
+        font-size: 1.4rem;
     }
 }

@@ -124,7 +124,7 @@ section p, section li { font-size: 1.2rem; line-height: 1.7; }
 
 /* ---------------- Certificates Carousel (manual scroll) ---------------- */
 .carousel {
-    overflow-x: auto;       /* allow horizontal scroll */
+    overflow-x: auto;       /* horizontal scroll */
     scroll-behavior: smooth;
     width: 100%;
     margin-bottom: 3rem;
@@ -138,16 +138,16 @@ section p, section li { font-size: 1.2rem; line-height: 1.7; }
 
 .carousel-track img {
     flex: 0 0 auto;        /* do not shrink, maintain width */
-    width: 300px;          /* desktop size, can adjust */
+    width: 300px;          /* adjust size for desktop */
     height: auto;
     border-radius: 8px;
     scroll-snap-align: start; /* snap each image */
 }
 
-
+/* ---------------- Mobile adjustments ---------------- */
 @media(max-width: 768px) {
     .carousel-track img {
-        width: 100%;       /* full width of the container */
+        width: 100%;       /* full width of container on mobile */
         height: auto;
     }
 }

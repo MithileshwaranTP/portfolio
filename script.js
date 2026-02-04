@@ -31,3 +31,8 @@ function rotateText() {
 
 // Start rotation every 2 seconds
 setInterval(rotateText, 2000);
+document.querySelectorAll('#navLinks a').forEach(link => {
+    link.addEventListener('click', () => {
+        navLinks.classList.remove('active');
+    });
+});

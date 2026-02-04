@@ -123,17 +123,46 @@ section p, section li { font-size: 1.2rem; line-height: 1.7; }
 .contact-item:hover { color: #0088cc; }
 
 /* ---------------- Certificates Carousel ---------------- */
-.carousel { overflow: hidden; width: 100%; margin-bottom: 3rem; }
-.carousel-track { display: flex; animation: scroll-left 20s linear infinite; }
-.carousel-track img {
-    flex: 0 0 auto;      /* keep images in row */
-    width: auto;          /* width adjusts automatically */
-    height: 50vh;         /* fill section height, adjust as needed */
-    border-radius: 8px;
-    margin-right: 1rem;
-    object-fit: cover;    /* cover entire height without distortion */
+.carousel {
+    overflow: hidden;
+    width: 100%;
+    margin-bottom: 3rem;
 }
-@keyframes scroll-left { 0% { transform: translateX(100%); } 100% { transform: translateX(-100%); } }
+
+.carousel-track {
+    display: flex;
+    animation: scroll-left 20s linear infinite;
+    gap: 1rem; /* space between images */
+}
+
+.carousel-track img {
+    flex: 1 0 auto;       /* allow images to grow to fill space */
+    width: auto;          /* let browser calculate width to preserve aspect ratio */
+    max-height: 60vh;     /* make images taller on desktop */
+    border-radius: 8px;
+    object-fit: cover;    /* fill the box without distortion */
+}
+
+/* Optional: scale up images on hover */
+.carousel-track img:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s;
+}
+
+@keyframes scroll-left {
+    0% { transform: translateX(100%); }
+    100% { transform: translateX(-100%); }
+}
+
+/* Mobile adjustments */
+@media(max-width: 768px) {
+    .carousel-track img {
+        width: 100%;
+        height: auto;
+        max-height: none;
+    }
+}
+
 
 /* ---------------- Footer ---------------- */
 footer { text-align: center; padding: 2rem; background: #0d1b2a; color: #fff; font-size: 1.1rem; }

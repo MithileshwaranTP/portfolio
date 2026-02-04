@@ -122,44 +122,53 @@ section p, section li { font-size: 1.2rem; line-height: 1.7; }
 .contact-item i { font-size: 1.5rem; }
 .contact-item:hover { color: #0088cc; }
 
-/* ---------------- Certificates Carousel ---------------- */
+/* Certificates Carousel – manual scroll version */
 .carousel {
-    overflow: hidden;
-    width: 100%;
-    margin-bottom: 3rem;
+    overflow-x: auto;       /* enable horizontal scroll */
+    overflow-y: hidden;     /* hide vertical scroll */
+    display: flex;          /* horizontal layout */
+    gap: 1rem;              /* space between images */
+    padding-bottom: 1rem;   /* give a little space for scrollbar */
+    scroll-behavior: smooth; /* smooth scrolling */
+    -webkit-overflow-scrolling: touch; /* smooth scroll on iOS */
 }
 
 .carousel-track {
     display: flex;
-    animation: scroll-left 40s linear infinite;
-    gap: 1rem; /* space between images */
+    flex-wrap: nowrap;      /* prevent wrapping to next line */
 }
 
 .carousel-track img {
-    flex: 1 0 auto;       /* allow images to grow to fill space */
-    width: auto;          /* let browser calculate width to preserve aspect ratio */
-    max-height: 60vh;     /* make images taller on desktop */
+    flex: 0 0 auto;         /* prevent images from shrinking */
+    width: 300px;           /* fixed image width */
+    height: auto;           /* maintain aspect ratio */
     border-radius: 8px;
-    object-fit: cover;    /* fill the box without distortion */
-}
-
-/* Optional: scale up images on hover */
-.carousel-track img:hover {
-    transform: scale(1.05);
+    cursor: pointer;        /* optional, shows it’s scrollable/clickable */
     transition: transform 0.3s;
 }
 
-@keyframes scroll-left {
-    0% { transform: translateX(100%); }
-    100% { transform: translateX(-100%); }
+.carousel-track img:hover {
+    transform: scale(1.05); /* optional hover effect */
 }
 
-/* Mobile adjustments */
+/* Optional: hide scrollbar for cleaner look */
+.carousel::-webkit-scrollbar {
+    height: 8px;
+}
+.carousel::-webkit-scrollbar-thumb {
+    background-color: #00aaff;
+    border-radius: 4px;
+}
+.carousel::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+/* Mobile adjustments for carousel */
 @media(max-width: 768px) {
     .carousel-track img {
-        width: 100%;
-        height: auto;
-        max-height: none;
+        width: 100%;       /* full width of the carousel container */
+        height: auto;      /* maintain aspect ratio */
+        flex: 0 0 auto;    /* prevent shrinking */
     }
 }
 

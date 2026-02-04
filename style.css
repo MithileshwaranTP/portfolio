@@ -18,6 +18,17 @@ header {
     color: #fff;
 }
 
+.logo {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #fff;
+    text-decoration: none;
+}
+
+.logo:hover {
+    color: #00aaff;
+}
+
 .navbar {
     display: flex;
     justify-content: space-between;

@@ -18,28 +18,6 @@ header {
     color: #fff;
 }
 
-.logo {
-    font-size: 2rem;
-    font-weight: bold;
-    color: #fff;
-    text-decoration: none;
-}
-
-.logo:hover {
-    color: #00aaff;
-}
-.back-home {
-    display: inline-block;
-    margin-bottom: 1.5rem;
-    color: #00aaff;
-    text-decoration: none;
-    font-size: 1.1rem;
-}
-
-.back-home:hover {
-    text-decoration: underline;
-}
-
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -50,9 +28,15 @@ header {
     z-index: 100;
 }
 
-.navbar .logo {
+.logo {
     font-size: 2rem;
     font-weight: bold;
+    color: #fff;
+    text-decoration: none;
+}
+
+.logo:hover {
+    color: #00aaff;
 }
 
 .navbar ul {
@@ -82,12 +66,13 @@ header {
 .hero {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;  /* align left */
-    padding: 2rem 10%;       /* spacing from edges */
+    align-items: flex-start;
+    padding: 2rem 10%;
     min-height: 50vh;
     background: #0d1b2a;
     width: 100%;
 }
+
 .profile-pic {
     width: 250px;
     height: 250px;
@@ -96,21 +81,13 @@ header {
     margin-bottom: 1.5rem;
     border: 4px solid #00aaff;
 }
+
 .hero-left {
     display: flex;
     align-items: center;
     gap: 1.5rem; /* space between photo and dynamic text */
 }
-.hero h1 {
-    font-size: 3.8rem;
-    color: #fff;
-    margin-bottom: 2rem;
-}
 
-.hero p {
-    font-size: 2.2rem;
-    color: #00aaff;
-}
 #dynamic-text {
     font-size: 2.2rem;
     color: #00aaff;
@@ -202,7 +179,6 @@ section p, section li {
 }
 
 /* ---------------- Contact ---------------- */
-/* Contact Section */
 #contact p {
     font-size: 1.2rem;
     margin-bottom: 1rem;
@@ -225,13 +201,12 @@ section p, section li {
 }
 
 .contact-item i {
-    font-size: 1.5rem; /* icon size */
+    font-size: 1.5rem;
 }
 
 .contact-item:hover {
     color: #0088cc;
 }
-
 
 /* ---------------- Certificates ---------------- */
 .certificate-grid {
@@ -255,21 +230,21 @@ section p, section li {
     color: #555;
     font-size: 1.1rem;
 }
-/* Certificates mobile home menu */
+
+/* ---------------- Certificates Mobile Menu ---------------- */
 .mobile-home-menu {
     position: fixed;
     top: 15px;
     right: 15px;
-    z-index: 1000;
+    z-index: 2000;
 }
 
 #cert-menu-btn {
     font-size: 1.8rem;
-    color: #0d1b2a;
+    color: #00aaff; /* same color as home page menu */
     cursor: pointer;
 }
 
-/* Hidden by default */
 .cert-menu-links {
     display: none;
     position: absolute;
@@ -284,13 +259,14 @@ section p, section li {
     color: #fff;
     text-decoration: none;
     font-size: 1rem;
+    display: block;
+    padding: 0.3rem 0;
 }
 
 .cert-menu-links a:hover {
     color: #00aaff;
 }
 
-/* Show menu */
 .cert-menu-links.active {
     display: block;
 }
@@ -333,15 +309,11 @@ footer {
 /* Tablet */
 @media(max-width: 1024px) {
     html { font-size: 17px; }
-
     section { padding: 4rem 8%; }
-
     section h2 { font-size: 2.2rem; }
     section h3 { font-size: 1.6rem; }
     section p, section li { font-size: 1.1rem; line-height: 1.6; }
-
     .skills-container, .certificate-grid { grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem; }
-
     .hero h1 { font-size: 3.2rem; }
     .hero p { font-size: 1.8rem; }
 }
@@ -349,7 +321,6 @@ footer {
 /* Mobile */
 @media(max-width: 768px) {
     html { font-size: 16px; }
-
     .navbar ul {
         display: none;
         flex-direction: column;
@@ -359,18 +330,13 @@ footer {
         top: 60px;
         left: 0;
     }
-
     .navbar ul li { text-align: center; margin: 1rem 0; }
     #menu-btn { display: block; }
-
     section { padding: 3rem 5%; }
-
     section h2 { font-size: 1.9rem; }
     section h3 { font-size: 1.4rem; }
     section p, section li { font-size: 1rem; line-height: 1.6; }
-
     .skills-container, .certificate-grid { grid-template-columns: 1fr; gap: 1rem; }
-
     .hero { min-height: auto; gap: 1rem; }
     .profile-pic { width: 180px; height: 180px; border: 3px solid #00aaff; }
     .hero h1 { font-size: 2.6rem; }
@@ -380,53 +346,16 @@ footer {
 /* Extra small phones */
 @media(max-width: 480px) {
     html { font-size: 15px; }
-
     section { padding: 2rem 3%; }
-
     section h2 { font-size: 1.6rem; }
     section h3 { font-size: 1.2rem; }
     section p, section li { font-size: 0.95rem; line-height: 1.5; }
-
     .profile-pic { width: 140px; height: 140px; border: 2px solid #00aaff; }
     .hero h1 { font-size: 2rem; }
     .hero p { font-size: 1.3rem; }
 }
+
 /* Mobile menu open state */
 .navbar ul.active {
     display: flex;
 }
-
-/* Certificates mobile home menu */
-.mobile-home-menu {
-    position: fixed;
-    top: 15px;
-    right: 15px;
-    z-index: 2000;
-}
-
-#cert-menu-btn {
-    font-size: 1.8rem;
-    color: #0d1b2a;
-    cursor: pointer;
-}
-
-.cert-menu-links {
-    display: none;
-    position: absolute;
-    top: 35px;
-    right: 0;
-    background: #0d1b2a;
-    padding: 0.6rem 1rem;
-    border-radius: 6px;
-}
-
-.cert-menu-links a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 1rem;
-}
-
-.cert-menu-links.active {
-    display: block;
-}
-

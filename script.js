@@ -63,5 +63,17 @@ document.addEventListener("DOMContentLoaded", () => {
 
 });
 
+// Toggle mobile menu
+menuBtn.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+
+    // Stop dynamic text when menu is open
+    if (navLinks.classList.contains('active')) {
+        dynamicText.style.opacity = '0';
+    } else {
+        dynamicText.style.opacity = '1';
+    }
+});
+
 
 

@@ -89,6 +89,11 @@ header {
     font-size: 2.2rem;
     color: #00aaff;
 }
+#dynamic-text {
+    font-size: 2.2rem;
+    color: #00aaff;
+    transition: opacity 0.5s ease-in-out;
+}
 
 /* ---------------- Sections ---------------- */
 section {

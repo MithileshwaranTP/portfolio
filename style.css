@@ -202,6 +202,29 @@ footer {
     background: #0d1b2a;
     color: #fff;
 }
+.carousel {
+    overflow: hidden;
+    width: 100%;
+    margin-bottom: 3rem;
+}
+
+.carousel-track {
+    display: flex;
+    animation: scroll-left 20s linear infinite;
+}
+
+.carousel-track img {
+    width: 250px;
+    height: auto;
+    border-radius: 8px;
+    margin-right: 1rem;
+}
+
+/* Scroll from right to left */
+@keyframes scroll-left {
+    0% { transform: translateX(100%); }
+    100% { transform: translateX(-100%); }
+}
 
 /* Responsive Design */
 

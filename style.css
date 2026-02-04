@@ -161,3 +161,24 @@ footer { text-align: center; padding: 2rem; background: #0d1b2a; color: #fff; fo
 
 /* Mobile adjustments for cert home */
 @media(max-width: 768px) { .cert-home-link { display: none; } }
+/* Certificates page home link */
+.cert-home-link {
+    margin-left: auto; /* push to right */
+    font-size: 1.2rem;
+    text-decoration: none;
+    color: #fff;
+    display: inline-block;
+}
+.cert-home-link:hover { color: #00aaff; }
+
+/* Hide desktop Home link on mobile */
+@media(max-width: 768px) {
+    .cert-home-link { display: none; }
+}
+
+/* Hide mobile UL in desktop view */
+#certMenu { display: none; }
+#certMenu.active { display: flex; flex-direction: column; position: absolute; top: 60px; right: 0; background: #0d1b2a; padding: 1rem; border-radius: 6px; }
+#certMenu li { margin: 0.5rem 0; }
+#certMenu a { color: #fff; text-decoration: none; }
+#certMenu a:hover { color: #00aaff; }

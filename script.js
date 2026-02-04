@@ -23,3 +23,12 @@ function rotateText() {
 
 // Change text every 2 seconds
 setInterval(rotateText, 2000);
+
+function rotateText() {
+    dynamicText.style.opacity = 0;
+    setTimeout(() => {
+        dynamicText.textContent = texts[index];
+        dynamicText.style.opacity = 1;
+        index = (index + 1) % texts.length;
+    }, 500); // matches the CSS transition duration
+}

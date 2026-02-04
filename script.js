@@ -1,38 +1,48 @@
-const menuBtn = document.getElementById('menu-btn');
-const navLinks = document.getElementById('navLinks');
+document.addEventListener("DOMContentLoaded", () => {
 
-menuBtn.addEventListener('click', () => {
-    navLinks.classList.toggle('active');
-});
+    /* ---------- Mobile Menu ---------- */
+    const menuBtn = document.getElementById('menu-btn');
+    const navLinks = document.getElementById('navLinks');
 
-// Rotating/Typewriter text under hero photo
-const texts = [
-    "Automation Engineer",
-    "Instrumentation Engineer",
-    "Industry 4.0 Enthusiast"
-];
+    if (menuBtn && navLinks) {
+        menuBtn.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
 
-let index = 0;
-const dynamicText = document.getElementById("dynamic-text");
+        // Close menu on link click
+        document.querySelectorAll('#navLinks a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+            });
+        });
+    }
 
-// Display first text immediately
-dynamicText.textContent = texts[index];
-index = (index + 1) % texts.length;
+    /* ---------- Rotating Hero Text ---------- */
+    const texts = [
+        "Automation Engineer",
+        "Instrumentation Engineer",
+        "Industry 4.0 Enthusiast"
+    ];
 
-// Function for fade effect rotation
-function rotateText() {
-    dynamicText.style.opacity = 0; // fade out
-    setTimeout(() => {
-        dynamicText.textContent = texts[index]; // update text
-        dynamicText.style.opacity = 1;          // fade in
-        index = (index + 1) % texts.length;
-    }, 500); // matches CSS transition duration
-}
+    let index = 0;
+    const dynamicText = document.getElementById("dynamic-text");
 
-// Start rotation every 2 seconds
-setInterval(rotateText, 2000);
-document.querySelectorAll('#navLinks a').forEach(link => {
-    link.addEventListener('click', () => {
-        navLinks.classList.remove('active');
-    });
+    if (!dynamicText) return;
+
+    // Show first text immediately
+    dynamicText.textContent = texts[index];
+    dynamicText.style.opacity = 1;
+    index++;
+
+    function rotateText() {
+        dynamicText.style.opacity = 0;
+
+        setTimeout(() => {
+            dynamicText.textContent = texts[index % texts.length];
+            dynamicText.style.opacity = 1;
+            index++;
+        }, 500);
+    }
+
+    setInterval(rotateText, 2000);
 });

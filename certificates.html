@@ -12,10 +12,14 @@
     <header>
         <nav class="navbar">
             <a href="index.html" class="logo">Mithileshwaran T P</a>
-            <ul class="nav-links" id="certNavLinks">
+            
+            <!-- Mobile-only menu -->
+            <i class="fas fa-bars" id="cert-menu-btn"></i>
+            
+            <!-- Hidden links for mobile -->
+            <ul class="nav-links" id="certMenu">
                 <li><a href="index.html">Home</a></li>
             </ul>
-            <i class="fas fa-bars" id="cert-menu-btn"></i>
         </nav>
     </header>
 
@@ -53,9 +57,24 @@
     </section>
 
     <footer>
-        <p>&copy; 2026 Mithileshwaran T P. All rights reserved.</p>
+        <p>&copy; 2026 Mithileshwaran T P</p>
     </footer>
 
-    <script src="script.js"></script>
+    <script>
+        // Certificates page mobile menu toggle
+        const certMenuBtn = document.getElementById('cert-menu-btn');
+        const certMenu = document.getElementById('certMenu');
+
+        certMenuBtn.addEventListener('click', () => {
+            certMenu.classList.toggle('active');
+        });
+
+        // Close menu when a link is clicked
+        document.querySelectorAll('#certMenu a').forEach(link => {
+            link.addEventListener('click', () => {
+                certMenu.classList.remove('active');
+            });
+        });
+    </script>
 </body>
 </html>

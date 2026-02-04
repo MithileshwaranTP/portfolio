@@ -57,8 +57,11 @@ header {
     justify-content: center;
     align-items: center;
     text-align: center;
-    height: 100vh;
-    gap: 1.5rem;
+    height: auto;         /* let content define the height */
+    min-height: 60vh;     /* still big but smaller than before */
+    padding: 2rem 1rem;   /* reduce space around */
+    gap: 1rem;
+    background: #0d1b2a;  /* keeps your blue */
 }
 
 .profile-pic {

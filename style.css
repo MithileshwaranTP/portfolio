@@ -62,9 +62,9 @@ header {
 .hero {
     display: flex;
     flex-direction: column;
-    justify-content: left;
-    align-items: left;
-    text-align: left;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
     height: 80vh;
     gap: 0.5rem;  /* spacing between photo, name, title */
 }

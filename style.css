@@ -1,0 +1,167 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Navbar */
+header {
+    background: #0d1b2a;
+    color: #fff;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.navbar .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.navbar ul {
+    display: flex;
+    list-style: none;
+}
+
+.navbar ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 0 1rem;
+    transition: color 0.3s;
+}
+
+.navbar ul li a:hover {
+    color: #00aaff;
+}
+
+#menu-btn {
+    display: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+/* Hero */
+.hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+}
+
+.hero p {
+    font-size: 1.5rem;
+    color: #00aaff;
+}
+
+/* Sections */
+section {
+    padding: 5rem 10%;
+}
+
+section h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: #0d1b2a;
+    border-bottom: 2px solid #00aaff;
+    display: inline-block;
+    padding-bottom: 0.5rem;
+}
+
+.skills-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+
+.skill-group {
+    background: #f1f1f1;
+    padding: 1rem;
+    border-radius: 8px;
+}
+
+/* Experience & Education */
+.experience-item, .education-item {
+    margin-bottom: 1.5rem;
+}
+
+.experience-item h3, .education-item h3 {
+    color: #0d1b2a;
+}
+
+.experience-item span, .education-item span {
+    font-style: italic;
+    color: #555;
+}
+
+/* Blogs */
+#blogs ul {
+    list-style: disc;
+    margin-left: 2rem;
+}
+
+#blogs a {
+    text-decoration: none;
+    color: #00aaff;
+}
+
+#blogs a:hover {
+    text-decoration: underline;
+}
+
+/* Contact */
+#contact a {
+    color: #00aaff;
+    text-decoration: none;
+}
+
+#contact a:hover {
+    text-decoration: underline;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 2rem;
+    background: #0d1b2a;
+    color: #fff;
+}
+
+/* Responsive */
+@media(max-width:768px) {
+    .navbar ul {
+        display: none;
+        flex-direction: column;
+        background: #0d1b2a;
+        position: absolute;
+        width: 100%;
+        top: 60px;
+        left: 0;
+    }
+
+    .navbar ul li {
+        text-align: center;
+        margin: 1rem 0;
+    }
+
+    #menu-btn {
+        display: block;
+    }
+}
+vvvvvvvvvvvvvvv

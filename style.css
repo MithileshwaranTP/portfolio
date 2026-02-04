@@ -7,18 +7,17 @@
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-/* ---------------- Root Font Size ---------------- */
-html {
-    font-size: 18px; /* Base for desktop */
-}
+/* ---------------- Root ---------------- */
+html { font-size: 18px; }
+body { min-height: 100vh; }
 
-/* ---------------- Navbar ---------------- */
+/* ---------------- Header & Navbar ---------------- */
 header {
     background: #0d1b2a;
     color: #fff;
     position: sticky;
     top: 0;
-    z-index: 100;
+    z-index: 1000;
 }
 
 .navbar {
@@ -35,34 +34,25 @@ header {
     text-decoration: none;
 }
 
-.logo:hover {
-    color: #00aaff;
-}
+.logo:hover { color: #00aaff; }
 
 .navbar ul {
     display: flex;
     list-style: none;
+    gap: 1rem;
 }
 
 .navbar ul li a {
     color: #fff;
     text-decoration: none;
-    padding: 0 1rem;
     font-size: 1.2rem;
     transition: color 0.3s;
 }
 
-.navbar ul li a:hover {
-    color: #00aaff;
-}
+.navbar ul li a:hover { color: #00aaff; }
 
-/* Hamburger menu hidden by default */
-#menu-btn, #cert-menu-btn {
-    display: none;
-    font-size: 2rem;
-    cursor: pointer;
-    color: #00aaff;
-}
+/* Hamburger menu hidden on desktop */
+#menu-btn, #cert-menu-btn { display: none; font-size: 2rem; cursor: pointer; color: #00aaff; }
 
 /* ---------------- Hero Section ---------------- */
 .hero {
@@ -72,7 +62,6 @@ header {
     padding: 2rem 10%;
     min-height: 50vh;
     background: #0d1b2a;
-    width: 100%;
 }
 
 .profile-pic {
@@ -90,17 +79,10 @@ header {
     gap: 1.5rem;
 }
 
-#dynamic-text {
-    font-size: 2.2rem;
-    color: #00aaff;
-    transition: opacity 0.5s ease-in-out;
-}
+#dynamic-text { font-size: 2.2rem; color: #00aaff; transition: opacity 0.5s; }
 
 /* ---------------- Sections ---------------- */
-section {
-    padding: 5rem 10%;
-}
-
+section { padding: 5rem 10%; }
 section h2 {
     font-size: 2.6rem;
     margin-bottom: 2rem;
@@ -109,244 +91,88 @@ section h2 {
     display: inline-block;
     padding-bottom: 0.5rem;
 }
-
-section h3 {
-    font-size: 1.8rem;
-    margin-bottom: 0.5rem;
-}
-
-section p, section li {
-    font-size: 1.2rem;
-    line-height: 1.7;
-}
+section h3 { font-size: 1.8rem; margin-bottom: 0.5rem; }
+section p, section li { font-size: 1.2rem; line-height: 1.7; }
 
 /* ---------------- Skills ---------------- */
-.skills-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 1.5rem;
-}
-
-.skill-group {
-    background: #f1f1f1;
-    padding: 1rem;
-    border-radius: 8px;
-}
+.skills-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; }
+.skill-group { background: #f1f1f1; padding: 1rem; border-radius: 8px; }
 
 /* ---------------- Experience & Education ---------------- */
-.experience-item, .education-item {
-    margin-bottom: 1.5rem;
-}
-
-.experience-item h3, .education-item h3 {
-    color: #0d1b2a;
-}
-
-.experience-item span, .education-item span {
-    font-style: italic;
-    color: #555;
-}
-
-.experience-item ul, .education-item ul {
-    margin-top: 0.5rem;
-    margin-left: 1.5rem;
-    list-style-type: disc;
-}
-
-.experience-item ul li, .education-item ul li {
-    margin-bottom: 0.4rem;
-    font-size: 1.1rem;
-}
-
-.experience-item p, .education-item p {
-    margin-top: 0.5rem;
-    font-size: 1.1rem;
-    line-height: 1.6;
-}
+.experience-item, .education-item { margin-bottom: 1.5rem; }
+.experience-item h3, .education-item h3 { color: #0d1b2a; }
+.experience-item span, .education-item span { font-style: italic; color: #555; }
+.experience-item ul, .education-item ul { margin-left: 1.5rem; margin-top: 0.5rem; }
+.experience-item ul li, .education-item ul li { margin-bottom: 0.4rem; font-size: 1.1rem; }
+.experience-item p, .education-item p { margin-top: 0.5rem; font-size: 1.1rem; line-height: 1.6; }
 
 /* ---------------- Blogs ---------------- */
-#blogs ul {
-    list-style: disc;
-    margin-left: 2rem;
-}
-
-#blogs a {
-    text-decoration: none;
-    color: #00aaff;
-    font-size: 1.2rem;
-}
-
-#blogs a:hover {
-    text-decoration: underline;
-}
+#blogs ul { list-style: disc; margin-left: 2rem; }
+#blogs a { text-decoration: none; color: #00aaff; font-size: 1.2rem; }
+#blogs a:hover { text-decoration: underline; }
 
 /* ---------------- Contact ---------------- */
-.contact-links {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-}
+.contact-links { display: flex; flex-direction: column; gap: 1rem; }
+.contact-item { text-decoration: none; color: #00aaff; font-size: 1.2rem; display: flex; align-items: center; gap: 0.5rem; transition: color 0.3s; }
+.contact-item i { font-size: 1.5rem; }
+.contact-item:hover { color: #0088cc; }
 
-.contact-item {
-    text-decoration: none;
-    color: #00aaff;
-    font-size: 1.2rem;
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    transition: color 0.3s;
-}
-
-.contact-item i {
-    font-size: 1.5rem;
-}
-
-.contact-item:hover {
-    color: #0088cc;
-}
-
-/* ---------------- Certificates ---------------- */
-.carousel {
-    overflow: hidden;
-    width: 100%;
-    margin-bottom: 3rem;
-}
-
-.carousel-track {
-    display: flex;
-    animation: scroll-left 20s linear infinite;
-}
-
-.carousel-track img {
-    width: 250px;
-    height: auto;
-    border-radius: 8px;
-    margin-right: 1rem;
-}
-
-@keyframes scroll-left {
-    0% { transform: translateX(100%); }
-    100% { transform: translateX(-100%); }
-}
+/* ---------------- Certificates Carousel ---------------- */
+.carousel { overflow: hidden; width: 100%; margin-bottom: 3rem; }
+.carousel-track { display: flex; animation: scroll-left 20s linear infinite; }
+.carousel-track img { width: 250px; height: auto; border-radius: 8px; margin-right: 1rem; }
+@keyframes scroll-left { 0% { transform: translateX(100%); } 100% { transform: translateX(-100%); } }
 
 /* ---------------- Footer ---------------- */
-footer {
-    text-align: center;
-    padding: 2rem;
-    background: #0d1b2a;
-    color: #fff;
-    font-size: 1.1rem;
-}
+footer { text-align: center; padding: 2rem; background: #0d1b2a; color: #fff; font-size: 1.1rem; }
 
-/* ---------------- Mobile / Responsive ---------------- */
-@media(max-width: 1024px) {
-    html { font-size: 17px; }
-    section { padding: 4rem 8%; }
+/* ---------------- Back to Top Button ---------------- */
+#back-to-top {
+    position: fixed; bottom: 20px; right: 20px; display: none;
+    background-color: #00aaff; color: #fff; border-radius: 50%;
+    width: 50px; height: 50px; font-size: 2rem; cursor: pointer;
+    z-index: 10000; border: none; transition: background 0.3s, transform 0.3s;
 }
+#back-to-top:hover { background-color: #0088cc; transform: translateY(-3px); }
 
+/* ---------------- Responsive ---------------- */
+
+/* Tablet */
+@media(max-width: 1024px) { html { font-size: 17px; } section { padding: 4rem 8%; } }
+
+/* Mobile */
 @media(max-width: 768px) {
     html { font-size: 16px; }
-
-    /* Navbar links hidden, show hamburger */
-    .navbar ul {
-        display: none;
-        flex-direction: column;
-        background: #0d1b2a;
-        position: absolute;
-        width: 100%;
-        top: 60px;
-        left: 0;
-    }
-
+    .navbar ul { display: none; flex-direction: column; background: #0d1b2a; position: absolute; width: 100%; top: 60px; left: 0; }
+    .navbar ul.active { display: flex; }
     .navbar ul li { text-align: center; margin: 1rem 0; }
-
-    #menu-btn, #cert-menu-btn {
-        display: block;
-    }
-
-    .navbar ul.active {
-        display: flex;
-    }
-
+    #menu-btn, #cert-menu-btn { display: block; }
     section { padding: 3rem 5%; }
-
     .skills-container, .certificate-grid { grid-template-columns: 1fr; gap: 1rem; }
-
     .profile-pic { width: 180px; height: 180px; border: 3px solid #00aaff; }
     #dynamic-text { font-size: 1.5rem; }
 }
 
+/* Extra small phones */
 @media(max-width: 480px) {
     html { font-size: 15px; }
-
     section { padding: 2rem 3%; }
-
     .profile-pic { width: 140px; height: 140px; border: 2px solid #00aaff; }
     #dynamic-text { font-size: 1.3rem; }
 }
 
-/* ---------------- Certificates Mobile Menu ---------------- */
-.mobile-home-menu {
-    position: fixed;
-    top: 15px;
-    right: 15px;
-    z-index: 2000;
-}
-
-.cert-menu-links {
-    display: none;
-    position: absolute;
-    top: 35px;
-    right: 0;
-    background: #0d1b2a;
-    padding: 0.6rem 1rem;
-    border-radius: 6px;
-}
-
-.cert-menu-links a {
-    color: #fff;
+/* ---------------- Certificates Home Button on Desktop ---------------- */
+.cert-home-link {
+    margin-left: auto; /* push to right */
+    font-size: 1.2rem;
     text-decoration: none;
-    font-size: 1rem;
-}
-
-.cert-menu-links a:hover {
-    color: #00aaff;
-}
-
-.cert-menu-links.active {
-    display: block;
-}
-
-/* ---------------- Back to Top Button ---------------- */
-#back-to-top {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    display: none; /* hidden initially */
-    background-color: #00aaff;
     color: #fff;
-    border: none;
-    border-radius: 50%;
-    width: 50px;
-    height: 50px;
-    font-size: 2rem;
-    cursor: pointer;
-    z-index: 10000;
-    transition: background-color 0.3s, transform 0.3s;
+    padding: 0.5rem 1rem;
+    transition: color 0.3s;
 }
+.cert-home-link:hover { color: #00aaff; }
 
-#back-to-top:hover {
-    background-color: #0088cc;
-    transform: translateY(-3px);
-}
-
-/* Mobile adjustments */
-@media(max-width: 480px) {
-    #back-to-top {
-        width: 40px;
-        height: 40px;
-        font-size: 1.5rem;
-        bottom: 15px;
-        right: 15px;
-    }
+/* Mobile adjustments for cert home */
+@media(max-width: 768px) {
+    .cert-home-link { display: none; }
 }

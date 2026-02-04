@@ -13,8 +13,8 @@ header {
     color: #fff;
 }
 .profile-pic {
-    width: 130px;          /* Small size like your old profile */
-    height: 130px;
+    width: 200px;          /* Small size like your old profile */
+    height: 200px;
     border-radius: 50%;   /* Makes it perfectly round */
     object-fit: cover;    /* Ensures the image fits inside the circle */
     margin-bottom: 0.5rem;

@@ -330,3 +330,7 @@ footer {
     .hero h1 { font-size: 2rem; }
     .hero p { font-size: 1.3rem; }
 }
+/* Mobile menu open state */
+.navbar ul.active {
+    display: flex;
+}

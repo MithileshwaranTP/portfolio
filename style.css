@@ -122,9 +122,9 @@ section p, section li { font-size: 1.2rem; line-height: 1.7; }
 .contact-item i { font-size: 1.5rem; }
 .contact-item:hover { color: #0088cc; }
 
-/* ---------------- Certificates Carousel (manual scroll) ---------------- */
+/* ---------------- Certificates Carousel (manual scroll, full width) ---------------- */
 .carousel {
-    overflow-x: auto;       /* horizontal scroll */
+    overflow-x: auto;          /* horizontal scroll */
     scroll-behavior: smooth;
     width: 100%;
     margin-bottom: 3rem;
@@ -132,25 +132,26 @@ section p, section li { font-size: 1.2rem; line-height: 1.7; }
 
 .carousel-track {
     display: flex;
-    gap: 1rem;             /* space between images */
-    scroll-snap-type: x mandatory; /* snap scrolling */
+    gap: 1rem;                 /* spacing between images */
 }
 
 .carousel-track img {
-    flex: 0 0 auto;        /* do not shrink, maintain width */
-    width: 300px;          /* adjust size for desktop */
+    flex: 0 0 auto;            /* prevent shrinking */
+    width: 100%;                /* fill available container width */
+    max-width: 600px;           /* optional max width for big screens */
     height: auto;
     border-radius: 8px;
-    scroll-snap-align: start; /* snap each image */
+    scroll-snap-align: start;
 }
 
 /* ---------------- Mobile adjustments ---------------- */
 @media(max-width: 768px) {
     .carousel-track img {
-        width: 100%;       /* full width of container on mobile */
-        height: auto;
+        width: 90%;             /* slightly smaller on mobile for padding */
+        max-width: none;
     }
 }
+
 
 
 /* ---------------- Footer ---------------- */

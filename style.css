@@ -60,18 +60,12 @@ header {
 .hero {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
+    align-items: flex-start;  /* align left */
+    padding: 2rem 10%;       /* spacing from edges */
     min-height: 50vh;
-    padding: 2rem 1rem;
-    gap: 1rem;
     background: #0d1b2a;
     width: 100%;
-    overflow-x: hidden; /* Prevent cutting */
-    box-sizing: border-box;
 }
-
 .profile-pic {
     width: 250px;
     height: 250px;
@@ -80,9 +74,15 @@ header {
     margin-bottom: 1.5rem;
     border: 4px solid #00aaff;
 }
-
+.hero-left {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem; /* space between photo and dynamic text */
+}
 .hero h1 {
     font-size: 3.8rem;
+    color: #fff;
+    margin-bottom: 2rem;
 }
 
 .hero p {

@@ -6,11 +6,9 @@
     scroll-behavior: smooth;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-
 /* ---------------- Root ---------------- */
 html { font-size: 18px; }
 body { min-height: 100vh; }
-
 /* ---------------- Navbar ---------------- */
 .navbar {
     display: flex;
@@ -22,7 +20,6 @@ body { min-height: 100vh; }
     z-index: 1000;
     background: #0d1b2a;
 }
-
 .logo {
     font-size: 2rem;
     font-weight: bold;
@@ -36,7 +33,6 @@ body { min-height: 100vh; }
     list-style: none;
     gap: 1rem;
 }
-
 .navbar ul li a {
     color: #fff;
     text-decoration: none;
@@ -44,10 +40,8 @@ body { min-height: 100vh; }
     transition: color 0.3s;
 }
 .navbar ul li a:hover { color: #00aaff; }
-
 /* Hamburger menu hidden on desktop */
 #menu-btn, #cert-menu-btn { display: none; font-size: 2rem; cursor: pointer; color: #00aaff; }
-
 /* ---------------- Hero Section ---------------- */
 .hero {
     display: flex;
@@ -58,7 +52,6 @@ body { min-height: 100vh; }
     background: #0d1b2a;
     width: 100%;
 }
-
 .profile-pic {
     width: 250px;
     height: 250px;
@@ -67,19 +60,16 @@ body { min-height: 100vh; }
     margin-bottom: 1.5rem;
     border: 4px solid #00aaff;
 }
-
 .hero-left {
     display: flex;
     align-items: center;
     gap: 1.5rem;
 }
-
 #dynamic-text {
     font-size: 2.2rem;
     color: #00aaff;
     transition: opacity 0.5s;
 }
-
 /* ---------------- Sections ---------------- */
 section {
     padding: 5rem 10%;
@@ -94,7 +84,6 @@ section h2 {
 }
 section h3 { font-size: 1.8rem; margin-bottom: 0.5rem; }
 section p, section li { font-size: 1.2rem; line-height: 1.7; }
-
 /* ---------------- Skills ---------------- */
 .skills-container {
     display: grid;
@@ -102,7 +91,6 @@ section p, section li { font-size: 1.2rem; line-height: 1.7; }
     gap: 1.5rem;
 }
 .skill-group { background: #f1f1f1; padding: 1rem; border-radius: 8px; }
-
 /* ---------------- Experience & Education ---------------- */
 .experience-item, .education-item { margin-bottom: 1.5rem; }
 .experience-item h3, .education-item h3 { color: #0d1b2a; }
@@ -110,18 +98,15 @@ section p, section li { font-size: 1.2rem; line-height: 1.7; }
 .experience-item ul, .education-item ul { margin-left: 1.5rem; margin-top: 0.5rem; }
 .experience-item ul li, .education-item ul li { margin-bottom: 0.4rem; font-size: 1.1rem; }
 .experience-item p, .education-item p { margin-top: 0.5rem; font-size: 1.1rem; line-height: 1.6; }
-
 /* ---------------- Blogs ---------------- */
 #blogs ul { list-style: disc; margin-left: 2rem; }
 #blogs a { text-decoration: none; color: #00aaff; font-size: 1.2rem; }
 #blogs a:hover { text-decoration: underline; }
-
 /* ---------------- Contact ---------------- */
 .contact-links { display: flex; flex-direction: column; gap: 1rem; }
 .contact-item { text-decoration: none; color: #00aaff; font-size: 1.2rem; display: flex; align-items: center; gap: 0.5rem; transition: color 0.3s; }
 .contact-item i { font-size: 1.5rem; }
 .contact-item:hover { color: #0088cc; }
-
 /* ---------------- Certificates Carousel ---------------- */
 .carousel {
     overflow-x: auto;       /* allow horizontal scroll */
@@ -129,48 +114,38 @@ section p, section li { font-size: 1.2rem; line-height: 1.7; }
     width: 100%;
     margin-bottom: 3rem;
 }
-
 .carousel-track {
     display: flex;
-    gap: 1rem;              /* spacing between images */
+    gap: 1rem;              
 }
-
 .carousel-track img {
-    flex: 0 0 auto;         /* do not shrink */
-    width: auto;             /* automatic width based on height */
-    height: 100%;            /* fill available height of container */
-    max-height: 500px;       /* control height on desktop */
+    flex: 0 0 auto;         
+    width: auto;             
+    height: 100%;            
+    max-height: 500px;       
     border-radius: 8px;
 }
-
 /* ---------------- Responsive adjustments ---------------- */
 @media(max-width: 1024px) {
     .carousel-track img {
         max-height: 400px;
     }
 }
-
 @media(max-width: 768px) {
     .carousel-track img {
-        width: 90%;           /* fill most of mobile screen */
-        height: auto;         /* maintain aspect ratio */
+        width: 90%;           
+        height: auto;        
         max-height: none;
     }
 }
-
 @media(max-width: 480px) {
     .carousel-track img {
-        width: 100%;          /* fill entire mobile section */
+        width: 100%;         
         height: auto;
     }
 }
-
-
-
-
 /* ---------------- Footer ---------------- */
 footer { text-align: center; padding: 2rem; background: #0d1b2a; color: #fff; font-size: 1.1rem; }
-
 /* ---------------- Certificates Page Home Link ---------------- */
 .cert-home-link {
     font-size: 1.2rem;
@@ -180,10 +155,8 @@ footer { text-align: center; padding: 2rem; background: #0d1b2a; color: #fff; fo
     transition: color 0.3s;
 }
 .cert-home-link:hover { color: #00aaff; }
-
 /* Desktop only for home link */
 @media(max-width: 768px) { .cert-home-link { display: none; } }
-
 /* ---------------- Mobile Certificate Menu ---------------- */
 #certMenu { display: none; }
 #certMenu.active {
@@ -199,12 +172,9 @@ footer { text-align: center; padding: 2rem; background: #0d1b2a; color: #fff; fo
 #certMenu li { margin: 0.5rem 0; }
 #certMenu a { color: #fff; text-decoration: none; }
 #certMenu a:hover { color: #00aaff; }
-
 /* ---------------- Responsive ---------------- */
-
 /* Tablet */
 @media(max-width: 1024px) { html { font-size: 17px; } section { padding: 4rem 8%; } }
-
 /* Mobile */
 @media(max-width: 768px) {
     html { font-size: 16px; }
@@ -217,7 +187,6 @@ footer { text-align: center; padding: 2rem; background: #0d1b2a; color: #fff; fo
     .profile-pic { width: 180px; height: 180px; border: 3px solid #00aaff; }
     #dynamic-text { font-size: 1.5rem; opacity: 1 !important; } /* hide dynamic text when mobile menu opens */
 }
-
 /* Extra small phones */
 @media(max-width: 480px) {
     html { font-size: 15px; }
@@ -228,34 +197,29 @@ footer { text-align: center; padding: 2rem; background: #0d1b2a; color: #fff; fo
 /* ---------------- Hero Section Mobile Adjustments ---------------- */
 @media(max-width: 768px) {
     .hero {
-        flex-direction: column;   /* keep vertical stacking */
-        align-items: center;      /* center content horizontally */
-        padding: 2rem 5%;         /* smaller padding for mobile */
+        flex-direction: column;   
+        align-items: center;      
+        padding: 2rem 5%;        
     }
-
     .hero-left {
         flex-direction: column;
         align-items: flex-start;
-        min-height: 60px; /* give enough vertical space */
+        min-height: 60px; 
     }
-
     #dynamic-text {
-        font-size: 1.5rem;        /* resize for mobile */
-        opacity: 1;               /* ensure visible */
+        font-size: 1.5rem;       
+        opacity: 1;               
     }
-
     .profile-pic {
         width: 180px;
         height: 180px;
         border: 3px solid #00aaff;
     }
 }
-
 @media(max-width: 480px) {
     #dynamic-text {
         font-size: 1.3rem;
     }
-
     .profile-pic {
         width: 140px;
         height: 140px;

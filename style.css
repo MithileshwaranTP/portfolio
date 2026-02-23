@@ -215,7 +215,7 @@ footer { text-align: center; padding: 2rem; background: #0d1b2a; color: #fff; fo
     section { padding: 3rem 5%; }
     .skills-container, .certificate-grid { grid-template-columns: 1fr; gap: 1rem; }
     .profile-pic { width: 180px; height: 180px; border: 3px solid #00aaff; }
-    #dynamic-text { font-size: 1.5rem; opacity: 0 !important; } /* hide dynamic text when mobile menu opens */
+    #dynamic-text { font-size: 1.5rem; opacity: 1 !important; } /* hide dynamic text when mobile menu opens */
 }
 
 /* Extra small phones */

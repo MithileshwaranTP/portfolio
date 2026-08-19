@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const words = [
             "Automation Engineer",
             "Instrumentation Engineer",
-            "Industry 4.0 Enthusiast"
+            "Industry 4.0"
         ];
         let index = 0;
         // Show first text immediately
